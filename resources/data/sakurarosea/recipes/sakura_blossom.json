@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "sakurarosea:leaves"
+    }
+  ],
+  "result": {
+    "item": "sakurarosea:sakura_blossom",
+    "count": 4
+  }
+}

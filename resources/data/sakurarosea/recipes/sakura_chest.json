@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    "x x",
+    "xxx"
+  ],
+  "key": {
+    "x": {
+      "item": "sakurarosea:sakura_log"
+    }
+  },
+  "result": {
+    "item": "sakurarosea:sakura_chest",
+    "count": 4
+  }
+}

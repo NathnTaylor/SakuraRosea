@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+    "BBB",
+    " b "
+  ],
+  "key": {
+    "B": {
+      "item": "sakurarosea:sakura_blossom"
+    },
+    "b": {
+      "item": "minecraft:bowl"
+    }
+  },
+  "result": {
+    "item": "sakurarosea:sakura_tea"
+  }
+}

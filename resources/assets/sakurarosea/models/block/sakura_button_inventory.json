@@ -1,0 +1,6 @@
+{
+  "parent": "block/button_inventory",
+  "textures": {
+    "texture": "sakurarosea:blocks/sakura_planks"
+  }
+}

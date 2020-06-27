@@ -1,0 +1,20 @@
+modLoader="javafml"
+loaderVersion="[31,)"
+
+[[mods]]
+modId="sakurarosea"
+version="${file.jarVersion}"
+displayName="Sakura Rosea"
+
+authors="sakiraart & gdude2002"
+
+description='''
+Sakura biome generation (and a few more things)
+'''
+
+[[dependencies.sakurarosea]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.15.2]"
+    ordering="NONE"
+    side="BOTH"

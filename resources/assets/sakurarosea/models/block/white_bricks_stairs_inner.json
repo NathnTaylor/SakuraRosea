@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "sakurarosea:blocks/white_bricks",
+    "top": "sakurarosea:blocks/white_bricks",
+    "side": "sakurarosea:blocks/white_bricks"
+  }
+}

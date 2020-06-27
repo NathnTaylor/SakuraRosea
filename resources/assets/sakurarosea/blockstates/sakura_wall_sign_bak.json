@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "facing=west,waterlogged=false": {
+      "model": "sakurarosea:block/sakura_sign"
+    },
+    "facing=north,waterlogged=false": {
+      "model": "sakurarosea:block/sakura_sign"
+    },
+    "facing=east,waterlogged=false": {
+      "model": "sakurarosea:block/sakura_sign"
+    },
+    "facing=south,waterlogged=false": {
+      "model": "sakurarosea:block/sakura_sign"
+    },
+    "facing=west,waterlogged=true": {
+      "model": "sakurarosea:block/sakura_sign"
+    },
+    "facing=north,waterlogged=true": {
+      "model": "sakurarosea:block/sakura_sign"
+    },
+    "facing=east,waterlogged=true": {
+      "model": "sakurarosea:block/sakura_sign"
+    },
+    "facing=south,waterlogged=true": {
+      "model": "sakurarosea:block/sakura_sign"
+    }
+  }
+}

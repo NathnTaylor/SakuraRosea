@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "sakurarosea:block/sakura_slab"
+    },
+    "type=top": {
+      "model": "sakurarosea:block/sakura_slab_top"
+    },
+    "type=double": {
+      "model": "sakurarosea:block/sakura_planks"
+    }
+  }
+}

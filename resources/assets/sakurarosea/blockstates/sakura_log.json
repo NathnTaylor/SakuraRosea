@@ -1,0 +1,21 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "sakurarosea:block/sakura_log",
+    "uvlock": true
+  },
+  "variants": {
+    "axis=y": {
+      "model": "sakurarosea:block/sakura_log"
+    },
+    "axis=z": {
+      "model": "sakurarosea:block/sakura_log",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "sakurarosea:block/sakura_log",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

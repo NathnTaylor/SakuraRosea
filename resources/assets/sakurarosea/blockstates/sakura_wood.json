@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "sakurarosea:block/sakura_wood"
+    },
+    "axis=z": {
+      "model": "sakurarosea:block/sakura_wood",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "sakurarosea:block/sakura_wood",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "itemGroup.sakurarosea": "Sakura Rosea",
+
+  "biome.sakurarosea.sakura_forest": "Bosque de sakura",
+  "biome.sakurarosea.sakura_forest_hills": "Bosque montañoso de sakura",
+
+  "block.sakurarosea.sakura_sapling": "Brote de sakura",
+  "block.sakurarosea.sakura_log": "Tronco de sakura",
+  "block.sakurarosea.stripped_sakura_log": "Tronco de sakura sin corteza",
+
+  "block.sakurarosea.sakura_wood": "Leño de sakura",
+  "block.sakurarosea.stripped_sakura_wood": "Leño de sakura sin corteza",
+
+  "block.sakurarosea.white_sakura_leaves": "Flores de sakura blancas",
+  "block.sakurarosea.sakura_leaves": "Flores de sakura",
+  "block.sakurarosea.alt_sakura_leaves": "Flores de sakura fucsias",
+  "item.sakurarosea.cherry": "Cerezas",
+  "item.sakurarosea.sakura_blossom": "Petalos de cerezo",
+  "item.sakurarosea.sakura_tea": "Té de cereza",
+
+  "block.sakurarosea.sakura_planks": "Madera de sakura",
+  "block.sakurarosea.sakura_slab": "Baldosa de sakura",
+  "block.sakurarosea.sakura_stairs": "Escaleras de sakura",
+
+  "block.sakurarosea.sakura_pressure_plate": "Placa de presión de sakura",
+  "block.sakurarosea.sakura_button": "Botón de sakura",
+  "block.sakurarosea.sakura_door": "Puerta de sakura",
+  "block.sakurarosea.sakura_trapdoor": "Escotilla de sakura",
+
+  "block.sakurarosea.sakura_fence": "Valla de sakura",
+  "block.sakurarosea.sakura_fence_gate": "Puerta de valla de sakura",
+
+  "block.sakurarosea.sakura_barrel": "Barril de sakura",
+  "container.sakurarosea.sakura_barrel": "Barril de sakura",
+  "block.sakurarosea.sakura_chest": "Cofre de sakura",
+  "container.sakurarosea.sakura_chest": "Cofre de sakura",
+  "container.sakurarosea.sakura_double_chest": "Cofre grande de sakura",
+
+  "block.sakurarosea.sakura_sign": "Cartel de sakura",
+  "item.sakurarosea.sakura_boat": "Bote de sakura",
+  "item.sakurarosea.sakura_shield": "Escudo de sakura",
+
+  "item.sakurarosea.white_clay": "Arcilla blanca",
+  "item.sakurarosea.white_brick": "Ladrillo blanco",
+  "block.sakurarosea.white_bricks": "Ladrillos blancos",
+  "block.sakurarosea.white_bricks_stairs": "Escaleras de ladrillos blancos",
+  "block.sakurarosea.white_bricks_wall": "Pared de ladrillos blancos"
+}

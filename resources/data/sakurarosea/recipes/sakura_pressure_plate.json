@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_pressure_plate",
+  "pattern": [
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "sakurarosea:sakura_planks"
+    }
+  },
+  "result": {
+    "item": "sakurarosea:sakura_pressure_plate"
+  }
+}

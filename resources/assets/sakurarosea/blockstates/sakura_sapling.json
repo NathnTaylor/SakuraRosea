@@ -1,0 +1,22 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "particle": "sakurarosea:blocks/sakura_leaves"
+    },
+    "model": "sakurarosea:block/sakura_sapling",
+    "uvlock": true
+  },
+  "variants": {
+    "stage=1": [
+      {
+        "model": "sakurarosea:block/sakura_sapling"
+      }
+    ],
+    "stage=0": [
+      {
+        "model": "sakurarosea:block/sakura_sapling"
+      }
+    ]
+  }
+}
