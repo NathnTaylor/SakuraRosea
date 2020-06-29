@@ -1,0 +1,14 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "sakurarosea:block/white_bricks",
+    "uvlock": true
+  },
+  "variants": {
+    "": [
+      {
+        "model": "sakurarosea:block/white_bricks"
+      }
+    ]
+  }
+}
