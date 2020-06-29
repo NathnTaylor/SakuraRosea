@@ -38,16 +38,19 @@ public class Biomes {
                 SAKURA_FOREST_BIOME.get(),
                 BiomeDictionary.Type.FOREST,
 
-                BiomeDictionary.Type.OVERWORLD,
-                BiomeDictionary.Type.DENSE
+                BiomeDictionary.Type.OVERWORLD
         );
 
         BiomeDictionary.addTypes(
-                SAKURA_FOREST_BIOME.get(),
+                SAKURA_FOREST_HILLS_BIOME.get(),
                 BiomeDictionary.Type.FOREST, BiomeDictionary.Type.HILLS,
 
-                BiomeDictionary.Type.OVERWORLD,
-                BiomeDictionary.Type.DENSE
+                BiomeDictionary.Type.OVERWORLD
         );
+    }
+
+    public static void registerEntries() {
+        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(SAKURA_FOREST_BIOME.get(), 10));
+        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(SAKURA_FOREST_HILLS_BIOME.get(), 10));
     }
 }

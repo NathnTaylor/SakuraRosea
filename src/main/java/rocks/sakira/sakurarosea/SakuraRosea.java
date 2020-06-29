@@ -68,6 +68,7 @@ public class SakuraRosea {
         Biomes.addFeatures();
         Biomes.registerSpawn();
         Biomes.registerTypes();
+        Biomes.registerEntries();
 
         // This block is pretty hacky, but I can't think of a better way to do this.
         // This is likely to break between major Forge versions.
