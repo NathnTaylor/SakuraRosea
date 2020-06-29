@@ -8,6 +8,7 @@ import net.minecraft.client.renderer.ItemRenderer;
 import net.minecraft.client.renderer.entity.model.ShieldModel;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.model.ItemCameraTransforms;
+import net.minecraft.client.renderer.model.ModelBakery;
 import net.minecraft.client.renderer.model.RenderMaterial;
 import net.minecraft.client.renderer.tileentity.BannerTileEntityRenderer;
 import net.minecraft.client.renderer.tileentity.ItemStackTileEntityRenderer;
@@ -25,7 +26,7 @@ import static rocks.sakira.sakurarosea.common.Materials.SAKURA_SHIELD_BASE;
 import static rocks.sakira.sakurarosea.common.Materials.SAKURA_SHIELD_NO_PATTERN;
 
 public class SakuraShieldRenderer extends ItemStackTileEntityRenderer {
-    private final ShieldModel shieldModel = new ShieldModel();
+    private final ShieldModel modelShield = new ShieldModel();
 
     @Override  // render
     public void func_239207_a_(ItemStack itemStackIn, ItemCameraTransforms.TransformType cameraTransform, MatrixStack matrixStackIn, IRenderTypeBuffer bufferIn, int combinedLightIn, int combinedOverlayIn) {
@@ -33,22 +34,39 @@ public class SakuraShieldRenderer extends ItemStackTileEntityRenderer {
 
         if (item == Items.SAKURA_SHIELD_ITEM.get()) {
             boolean flag = itemStackIn.getChildTag("BlockEntityTag") != null;
-
             matrixStackIn.push();
             matrixStackIn.scale(1.0F, -1.0F, -1.0F);
-            RenderMaterial material = flag ? SAKURA_SHIELD_BASE : SAKURA_SHIELD_NO_PATTERN;
-
-            IVertexBuilder ivertexbuilder = material.getSprite().wrapBuffer(ItemRenderer.getBuffer(bufferIn, shieldModel.getRenderType(material.getAtlasLocation()), false, itemStackIn.hasEffect()));
-            shieldModel.func_228294_b_().render(matrixStackIn, ivertexbuilder, combinedLightIn, combinedOverlayIn, 1.0F, 1.0F, 1.0F, 1.0F);
-
+            RenderMaterial rendermaterial = flag ? SAKURA_SHIELD_BASE : SAKURA_SHIELD_NO_PATTERN;
+            IVertexBuilder ivertexbuilder = rendermaterial.getSprite().wrapBuffer(ItemRenderer.func_239391_c_(bufferIn, this.modelShield.getRenderType(rendermaterial.getAtlasLocation()), true, itemStackIn.hasEffect()));
+            this.modelShield.func_228294_b_().render(matrixStackIn, ivertexbuilder, combinedLightIn, combinedOverlayIn, 1.0F, 1.0F, 1.0F, 1.0F);
             if (flag) {
                 List<Pair<BannerPattern, DyeColor>> list = BannerTileEntity.func_230138_a_(ShieldItem.getColor(itemStackIn), BannerTileEntity.func_230139_a_(itemStackIn));
-                BannerTileEntityRenderer.func_230180_a_(matrixStackIn, bufferIn, combinedLightIn, combinedOverlayIn, shieldModel.func_228293_a_(), material, false, list);
+                BannerTileEntityRenderer.func_241717_a_(matrixStackIn, bufferIn, combinedLightIn, combinedOverlayIn, this.modelShield.func_228293_a_(), rendermaterial, false, list, itemStackIn.hasEffect());
             } else {
-                shieldModel.func_228293_a_().render(matrixStackIn, ivertexbuilder, combinedLightIn, combinedOverlayIn, 1.0F, 1.0F, 1.0F, 1.0F);
+                this.modelShield.func_228293_a_().render(matrixStackIn, ivertexbuilder, combinedLightIn, combinedOverlayIn, 1.0F, 1.0F, 1.0F, 1.0F);
             }
 
             matrixStackIn.pop();
         }
+
+//        if (item == Items.SAKURA_SHIELD_ITEM.get()) {
+//            boolean flag = itemStackIn.getChildTag("BlockEntityTag") != null;
+//
+//            matrixStackIn.push();
+//            matrixStackIn.scale(1.0F, -1.0F, -1.0F);
+//            RenderMaterial material = flag ? SAKURA_SHIELD_BASE : SAKURA_SHIELD_NO_PATTERN;
+//
+//            IVertexBuilder ivertexbuilder = material.getSprite().wrapBuffer(ItemRenderer.getBuffer(bufferIn, shieldModel.getRenderType(material.getAtlasLocation()), false, itemStackIn.hasEffect()));
+//            shieldModel.func_228294_b_().render(matrixStackIn, ivertexbuilder, combinedLightIn, combinedOverlayIn, 1.0F, 1.0F, 1.0F, 1.0F);
+//
+//            if (flag) {
+//                List<Pair<BannerPattern, DyeColor>> list = BannerTileEntity.func_230138_a_(ShieldItem.getColor(itemStackIn), BannerTileEntity.func_230139_a_(itemStackIn));
+//                BannerTileEntityRenderer.func_230180_a_(matrixStackIn, bufferIn, combinedLightIn, combinedOverlayIn, shieldModel.func_228293_a_(), material, false, list);
+//            } else {
+//                shieldModel.func_228293_a_().render(matrixStackIn, ivertexbuilder, combinedLightIn, combinedOverlayIn, 1.0F, 1.0F, 1.0F, 1.0F);
+//            }
+//
+//            matrixStackIn.pop();
+//        }
     }
 }
