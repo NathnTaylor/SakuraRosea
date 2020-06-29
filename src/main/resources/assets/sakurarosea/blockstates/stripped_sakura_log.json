@@ -1,21 +1,16 @@
 {
-  "forge_marker": 1,
-  "defaults": {
-    "model": "sakurarosea:block/stripped_sakura_log",
-    "uvlock": true
-  },
   "variants": {
+    "axis=x": {
+      "model": "sakurarosea:block/stripped_sakura_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
     "axis=y": {
       "model": "sakurarosea:block/stripped_sakura_log"
     },
     "axis=z": {
-      "model": "sakurarosea:block/stripped_sakura_log",
+      "model": "sakurarosea:block/stripped_sakura_log_horizontal",
       "x": 90
-    },
-    "axis=x": {
-      "model": "sakurarosea:block/stripped_sakura_log",
-      "x": 90,
-      "y": 90
     }
   }
 }

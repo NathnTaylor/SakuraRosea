@@ -3,6 +3,7 @@ package rocks.sakira.sakurarosea.common.block;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
+import net.minecraft.util.Direction;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -76,11 +77,20 @@ public class Blocks {
     public static final RegistryObject<Block> SAKURA_LOG_BLOCK = REGISTER.register(
             "sakura_log",
 
-            () -> new Block(
-                    Block.Properties.create(Material.WOOD, MaterialColor.MAGENTA)
+            () -> new RotatedPillarBlock(
+                    AbstractBlock.Properties.func_235836_a_(
+                            Material.WOOD, (state) ->
+                                    state.get(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.MAGENTA : MaterialColor.MAGENTA
+                    )
                             .hardnessAndResistance(2.0F)
                             .sound(SoundType.WOOD)
             )
+
+//            () -> new Block(
+//                    Block.Properties.create(Material.WOOD, MaterialColor.MAGENTA)
+//                            .hardnessAndResistance(2.0F)
+//                            .sound(SoundType.WOOD)
+//            )
     );
 
     public static final RegistryObject<Block> SAKURA_PRESSURE_PLATE_BLOCK = REGISTER.register(
@@ -110,8 +120,11 @@ public class Blocks {
     public static final RegistryObject<Block> STRIPPED_SAKURA_LOG_BLOCK = REGISTER.register(
             "stripped_sakura_log",
 
-            () -> new Block(
-                    Block.Properties.create(Material.WOOD, MaterialColor.MAGENTA)
+            () -> new RotatedPillarBlock(
+                    AbstractBlock.Properties.func_235836_a_(
+                            Material.WOOD, (state) ->
+                                    state.get(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.MAGENTA : MaterialColor.MAGENTA
+                    )
                             .hardnessAndResistance(2.0F)
                             .sound(SoundType.WOOD)
             )
@@ -120,8 +133,11 @@ public class Blocks {
     public static final RegistryObject<Block> SAKURA_WOOD_BLOCK = REGISTER.register(
             "sakura_wood",
 
-            () -> new Block(
-                    Block.Properties.create(Material.WOOD, MaterialColor.MAGENTA)
+            () -> new RotatedPillarBlock(
+                    AbstractBlock.Properties.func_235836_a_(
+                            Material.WOOD, (state) ->
+                                    state.get(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.MAGENTA : MaterialColor.MAGENTA
+                    )
                             .hardnessAndResistance(2.0F)
                             .sound(SoundType.WOOD)
             )
@@ -130,8 +146,11 @@ public class Blocks {
     public static final RegistryObject<Block> STRIPPED_SAKURA_WOOD_BLOCK = REGISTER.register(
             "stripped_sakura_wood",
 
-            () -> new Block(
-                    Block.Properties.create(Material.WOOD, MaterialColor.MAGENTA)
+            () -> new RotatedPillarBlock(
+                    AbstractBlock.Properties.func_235836_a_(
+                            Material.WOOD, (state) ->
+                                    state.get(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.MAGENTA : MaterialColor.MAGENTA
+                    )
                             .hardnessAndResistance(2.0F)
                             .sound(SoundType.WOOD)
             )
