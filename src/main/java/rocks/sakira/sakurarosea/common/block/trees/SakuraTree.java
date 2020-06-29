@@ -27,8 +27,8 @@ public class SakuraTree extends Tree {
                         new SimpleBlockStateProvider(Blocks.SAKURA_LEAVES_BLOCK.get().getDefaultState()),
 
                         new BlobFoliagePlacer(2, 0, 0, 0, 3),
-                        new StraightTrunkPlacer(4, 8, 0),
-                        new TwoLayerFeature(1, 0, 1)
+                        new StraightTrunkPlacer(3, 3, 5),  // TODO: Still a bit weird
+                        new TwoLayerFeature(2, 1, 2)
                 )
 //                        .baseHeight(6)
 //                        .foliageHeight(3)
@@ -43,8 +43,8 @@ public class SakuraTree extends Tree {
                         new SimpleBlockStateProvider(Blocks.ALT_SAKURA_LEAVES_BLOCK.get().getDefaultState()),
 
                         new BlobFoliagePlacer(2, 0, 0, 0, 3),
-                        new StraightTrunkPlacer(4, 8, 0),
-                        new TwoLayerFeature(1, 0, 1)
+                        new StraightTrunkPlacer(3, 3, 5),  // TODO: Still a bit weird
+                        new TwoLayerFeature(2, 1, 2)
                 )
 //                        .baseHeight(6)
 //                        .foliageHeight(3)
@@ -59,8 +59,8 @@ public class SakuraTree extends Tree {
                         new SimpleBlockStateProvider(Blocks.WHITE_SAKURA_LEAVES_BLOCK.get().getDefaultState()),
 
                         new BlobFoliagePlacer(2, 0, 0, 0, 3),
-                        new StraightTrunkPlacer(4, 8, 0),
-                        new TwoLayerFeature(1, 0, 1)
+                        new StraightTrunkPlacer(3, 3, 5),  // TODO: Still a bit weird
+                        new TwoLayerFeature(2, 1, 2)
                 )
 //                        .baseHeight(6)
 //                        .foliageHeight(3)
@@ -68,6 +68,9 @@ public class SakuraTree extends Tree {
 //                        .ignoreVines()
 //                        .setSapling((IPlantable) Blocks.SAKURA_SAPLING_BLOCK.get())
         ).build();
+
+        // TODO: Figure these out when Forge fixes more things, there are no good examples yet
+        // TODO: (and besides we already weren't using these)
 
 //        HUGE_SAKURA_TREE_CONFIG = (
 //                new HugeTreeFeatureConfig.Builder(
