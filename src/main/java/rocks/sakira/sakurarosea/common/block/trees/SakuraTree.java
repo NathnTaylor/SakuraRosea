@@ -26,7 +26,7 @@ public class SakuraTree extends Tree {
                         new SimpleBlockStateProvider(Blocks.SAKURA_LOG_BLOCK.get().getDefaultState()),
                         new SimpleBlockStateProvider(Blocks.SAKURA_LEAVES_BLOCK.get().getDefaultState()),
 
-                        new BlobFoliagePlacer(2, 0, 0, 0, 3),
+                        new BlobFoliagePlacer(3, 0, 0, 0, 3),
                         new StraightTrunkPlacer(3, 3, 5),  // TODO: Still a bit weird
                         new TwoLayerFeature(2, 1, 2)
                 )
@@ -42,7 +42,7 @@ public class SakuraTree extends Tree {
                         new SimpleBlockStateProvider(Blocks.SAKURA_LOG_BLOCK.get().getDefaultState()),
                         new SimpleBlockStateProvider(Blocks.ALT_SAKURA_LEAVES_BLOCK.get().getDefaultState()),
 
-                        new BlobFoliagePlacer(2, 0, 0, 0, 3),
+                        new BlobFoliagePlacer(3, 0, 0, 0, 3),
                         new StraightTrunkPlacer(3, 3, 5),  // TODO: Still a bit weird
                         new TwoLayerFeature(2, 1, 2)
                 )
@@ -58,7 +58,7 @@ public class SakuraTree extends Tree {
                         new SimpleBlockStateProvider(Blocks.SAKURA_LOG_BLOCK.get().getDefaultState()),
                         new SimpleBlockStateProvider(Blocks.WHITE_SAKURA_LEAVES_BLOCK.get().getDefaultState()),
 
-                        new BlobFoliagePlacer(2, 0, 0, 0, 3),
+                        new BlobFoliagePlacer(3, 0, 0, 0, 3),
                         new StraightTrunkPlacer(3, 3, 5),  // TODO: Still a bit weird
                         new TwoLayerFeature(2, 1, 2)
                 )
