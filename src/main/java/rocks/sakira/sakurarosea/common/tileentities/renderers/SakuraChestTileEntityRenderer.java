@@ -5,8 +5,9 @@ import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.block.*;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.Vector3f;
-import net.minecraft.client.renderer.model.Material;
+import net.minecraft.client.renderer.model.RenderMaterial;
+import net.minecraft.util.math.vector.Vector3f;
+import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.client.renderer.tileentity.DualBrightnessCallback;
 import net.minecraft.client.renderer.tileentity.TileEntityRenderer;
@@ -74,7 +75,7 @@ public class SakuraChestTileEntityRenderer<T extends TileEntity & IChestLid> ext
         World world = tileEntityIn.getWorld();
         boolean flag = world != null;
         BlockState blockstate = flag ? tileEntityIn.getBlockState() : Blocks.CHEST.getDefaultState().with(ChestBlock.FACING, Direction.SOUTH);
-        ChestType chesttype = blockstate.has(ChestBlock.TYPE) ? blockstate.get(ChestBlock.TYPE) : ChestType.SINGLE;
+        ChestType chesttype = blockstate.func_235901_b_(ChestBlock.TYPE) ? blockstate.get(ChestBlock.TYPE) : ChestType.SINGLE;
         Block block = blockstate.getBlock();
         if (block instanceof AbstractChestBlock) {
             AbstractChestBlock<?> abstractchestblock = (AbstractChestBlock) block;
@@ -95,7 +96,7 @@ public class SakuraChestTileEntityRenderer<T extends TileEntity & IChestLid> ext
             f1 = 1.0F - f1;
             f1 = 1.0F - f1 * f1 * f1;
             int i = icallbackwrapper.apply(new DualBrightnessCallback<>()).applyAsInt(combinedLightIn);
-            Material material = this.getMaterial(tileEntityIn, chesttype);
+            RenderMaterial material = this.getMaterial(tileEntityIn, chesttype);
             IVertexBuilder ivertexbuilder = material.getBuffer(bufferIn, RenderType::getEntityCutout);
             if (flag1) {
                 if (chesttype == ChestType.LEFT) {
@@ -119,9 +120,7 @@ public class SakuraChestTileEntityRenderer<T extends TileEntity & IChestLid> ext
         chestBottom.render(matrixStackIn, bufferIn, combinedLightIn, combinedOverlayIn);
     }
 
-    protected Material getMaterial(T tileEntity, ChestType chestType) {
-        Material m = Materials.getChestMaterial(chestType);
-
-        return m;
+    protected RenderMaterial getMaterial(T tileEntity, ChestType chestType) {
+        return Materials.getChestMaterial(chestType);
     }
 }

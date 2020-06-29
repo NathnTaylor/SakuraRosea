@@ -3,6 +3,7 @@ package rocks.sakira.sakurarosea.common.tileentities.renderers;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
+import net.minecraft.client.renderer.model.ItemCameraTransforms;
 import net.minecraft.client.renderer.tileentity.ItemStackTileEntityRenderer;
 import net.minecraft.client.renderer.tileentity.TileEntityRenderer;
 import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
@@ -12,7 +13,7 @@ import rocks.sakira.sakurarosea.common.block.SakuraChestBlock;
 
 public class SakuraChestItemStackRenderer extends ItemStackTileEntityRenderer {
     @Override
-    public void render(ItemStack itemStackIn, MatrixStack matrixStackIn, IRenderTypeBuffer bufferIn, int combinedLightIn, int combinedOverlayIn) {
+    public void func_239207_a_(ItemStack itemStackIn, ItemCameraTransforms.TransformType cameraTransform, MatrixStack matrixStackIn, IRenderTypeBuffer bufferIn, int combinedLightIn, int combinedOverlayIn) {
         Block block = Block.getBlockFromItem(itemStackIn.getItem());
 
         if (block instanceof SakuraChestBlock) {
@@ -25,7 +26,7 @@ public class SakuraChestItemStackRenderer extends ItemStackTileEntityRenderer {
                 sakuraRenderer.render(entity, 0F, matrixStackIn, bufferIn, combinedLightIn, combinedOverlayIn);
             }
         } else {
-            super.render(itemStackIn, matrixStackIn, bufferIn, combinedLightIn, combinedOverlayIn);
+            super.func_239207_a_(itemStackIn, cameraTransform, matrixStackIn, bufferIn, combinedLightIn, combinedOverlayIn);
         }
     }
 }

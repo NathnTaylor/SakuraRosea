@@ -10,7 +10,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import static rocks.sakira.sakurarosea.Constants.MOD_ID;
 
 public class Biomes {
-    public static final DeferredRegister<Biome> REGISTER = new DeferredRegister<>(ForgeRegistries.BIOMES, MOD_ID);
+    public static final DeferredRegister<Biome> REGISTER = DeferredRegister.create(ForgeRegistries.BIOMES, MOD_ID);
 
     public static final RegistryObject<Biome> SAKURA_FOREST_HILLS_BIOME = REGISTER.register(
             "sakura_forest_hills",

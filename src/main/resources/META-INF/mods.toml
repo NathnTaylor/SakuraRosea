@@ -15,6 +15,6 @@ Sakura biome generation (and a few more things)
 [[dependencies.sakurarosea]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.15.2]"
+    versionRange="[1.16.1]"
     ordering="NONE"
     side="BOTH"

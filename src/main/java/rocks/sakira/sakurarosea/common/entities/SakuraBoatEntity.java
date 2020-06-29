@@ -4,7 +4,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.item.BoatEntity;
 import net.minecraft.item.Item;
 import net.minecraft.network.IPacket;
-import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.network.NetworkHooks;
 import rocks.sakira.sakurarosea.common.item.Items;
@@ -18,7 +18,7 @@ public class SakuraBoatEntity extends BoatEntity {
     public SakuraBoatEntity(World worldIn, double x, double y, double z) {
         this(Entities.SAKURA_BOAT_ENTITY.get(), worldIn);
         this.setPosition(x, y, z);
-        this.setMotion(Vec3d.ZERO);
+        this.setMotion(Vector3d.ZERO);
         this.prevPosX = x;
         this.prevPosY = y;
         this.prevPosZ = z;

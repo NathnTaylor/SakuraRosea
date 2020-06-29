@@ -24,7 +24,7 @@ public class ModBiomeFeatures {
         biomeIn.addFeature(
                 GenerationStage.Decoration.VEGETAL_DECORATION,
 
-                Feature.NORMAL_TREE
+                Feature.field_236291_c_
                         .withConfiguration(SakuraTree.SAKURA_TREE_CONFIG)
                         .withPlacement(Placement.COUNT_HEIGHTMAP.configure(new FrequencyConfig(2)))
         );
@@ -32,7 +32,7 @@ public class ModBiomeFeatures {
         biomeIn.addFeature(
                 GenerationStage.Decoration.VEGETAL_DECORATION,
 
-                Feature.NORMAL_TREE
+                Feature.field_236291_c_
                         .withConfiguration(SakuraTree.ALT_SAKURA_TREE_CONFIG)
                         .withPlacement(Placement.COUNT_HEIGHTMAP.configure(new FrequencyConfig(2)))
         );
@@ -40,7 +40,7 @@ public class ModBiomeFeatures {
         biomeIn.addFeature(
                 GenerationStage.Decoration.VEGETAL_DECORATION,
 
-                Feature.NORMAL_TREE
+                Feature.field_236291_c_
                         .withConfiguration(SakuraTree.WHITE_SAKURA_TREE_CONFIG)
                         .withPlacement(Placement.COUNT_HEIGHTMAP.configure(new FrequencyConfig(2)))
         );

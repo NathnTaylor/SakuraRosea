@@ -5,7 +5,6 @@ import com.google.common.collect.Maps;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.*;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.fluid.IFluidState;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.state.DirectionProperty;
 import net.minecraft.state.StateContainer;
@@ -19,6 +18,7 @@ import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.IWorldReader;
+import net.minecraftforge.common.extensions.IForgeFluidState;
 import rocks.sakira.sakurarosea.common.tileentities.TileEntities;
 
 import javax.annotation.Nullable;
@@ -51,7 +51,7 @@ public class SakuraWallSignBlock extends WallSignBlock {
     @Nullable
     public BlockState getStateForPlacement(BlockItemUseContext context) {
         BlockState blockstate = this.getDefaultState();
-        IFluidState ifluidstate = context.getWorld().getFluidState(context.getPos());
+        IForgeFluidState ifluidstate = context.getWorld().getFluidState(context.getPos());
         IWorldReader iworldreader = context.getWorld();
         BlockPos blockpos = context.getPos();
         Direction[] adirection = context.getNearestLookingDirections();
@@ -61,7 +61,7 @@ public class SakuraWallSignBlock extends WallSignBlock {
                 Direction direction1 = direction.getOpposite();
                 blockstate = blockstate.with(FACING, direction1);
                 if (blockstate.isValidPosition(iworldreader, blockpos)) {
-                    return blockstate.with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
+                    return blockstate.with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluidState().getFluid() == Fluids.WATER));
                 }
             }
         }

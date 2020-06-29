@@ -42,10 +42,13 @@ public class SakuraSaplingBlock extends BushBlock implements IGrowable {
     @Override
     public void grow(ServerWorld worldIn, Random rand, BlockPos pos, BlockState state) {
         if (state.get(STAGE) == 0) {
-            worldIn.setBlockState(pos, state.cycle(STAGE), 4);
+            worldIn.setBlockState(
+                    pos,
+                    state.func_235896_a_(STAGE),  // cycle
+                    4);
         } else {
             SakuraTree tree = new SakuraTree();
-            tree.place(worldIn, worldIn.getChunkProvider().getChunkGenerator(), pos, state, rand);
+            tree.func_230339_a_(worldIn, worldIn.getChunkProvider().getChunkGenerator(), pos, state, rand);  // place
         }
     }
 }

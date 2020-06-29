@@ -70,13 +70,12 @@ public class SakuraChestTileEntity extends ChestTileEntity implements IChestLid,
                 new ResourceLocation(Constants.MOD_ID, "textures/entity/chest/sakura.png");
     }
 
-    @Override
-    public void read(CompoundNBT compound) {
-        super.read(compound);
+    @Override  // read
+    public void func_230337_a_(BlockState p_230337_1_, CompoundNBT p_230337_2_) {
+        super.func_230337_a_(p_230337_1_, p_230337_2_);
         this.chestContents = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);
-
-        if (!this.checkLootAndRead(compound)) {
-            ItemStackHelper.loadAllItems(compound, this.chestContents);
+        if (!this.checkLootAndRead(p_230337_2_)) {
+            ItemStackHelper.loadAllItems(p_230337_2_, this.chestContents);
         }
 
     }

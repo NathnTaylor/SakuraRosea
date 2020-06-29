@@ -6,7 +6,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.Atlases;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
-import net.minecraft.client.renderer.model.Material;
+import net.minecraft.client.renderer.model.RenderMaterial;
 import net.minecraft.client.renderer.texture.AtlasTexture;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.ResourceLocation;
@@ -46,7 +46,7 @@ public class SakuraRosea {
     private static final Logger LOGGER = LogManager.getLogger();
 
     static {
-        Atlases.SIGN_MATERIALS.put(FaeWoodType.SAKURA, new Material(Atlases.SIGN_ATLAS, new ResourceLocation(MOD_ID, "entity/signs/sakura")));
+        Atlases.SIGN_MATERIALS.put(FaeWoodType.SAKURA, new RenderMaterial(Atlases.SIGN_ATLAS, new ResourceLocation(MOD_ID, "entity/signs/sakura")));
     }
 
     public SakuraRosea() {

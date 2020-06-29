@@ -9,7 +9,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import static rocks.sakira.sakurarosea.Constants.MOD_ID;
 
 public class Entities {
-    public static final DeferredRegister<EntityType<?>> REGISTER = new DeferredRegister<>(ForgeRegistries.ENTITIES, MOD_ID);
+    public static final DeferredRegister<EntityType<?>> REGISTER = DeferredRegister.create(ForgeRegistries.ENTITIES, MOD_ID);
 
     public static final RegistryObject<EntityType<SakuraBoatEntity>> SAKURA_BOAT_ENTITY = REGISTER.register(
             "sakura_boat",

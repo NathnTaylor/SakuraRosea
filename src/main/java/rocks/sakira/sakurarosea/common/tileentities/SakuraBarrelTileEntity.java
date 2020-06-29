@@ -15,7 +15,7 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
-import net.minecraft.util.math.Vec3i;
+import net.minecraft.util.math.vector.Vector3i;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
 import rocks.sakira.sakurarosea.common.block.SakuraBarrelBlock;
@@ -40,15 +40,14 @@ public class SakuraBarrelTileEntity extends LockableLootTileEntity {
         return compound;
     }
 
-    @Override
-    public void read(CompoundNBT compound) {
-        super.read(compound);
-
+    @Override  // read
+    public void func_230337_a_(BlockState p_230337_1_, CompoundNBT p_230337_2_) {
+        super.func_230337_a_(p_230337_1_, p_230337_2_);
         this.barrelContents = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);
-
-        if (!this.checkLootAndRead(compound)) {
-            ItemStackHelper.loadAllItems(compound, this.barrelContents);
+        if (!this.checkLootAndRead(p_230337_2_)) {
+            ItemStackHelper.loadAllItems(p_230337_2_, this.barrelContents);
         }
+
     }
 
     @Override
@@ -176,7 +175,7 @@ public class SakuraBarrelTileEntity extends LockableLootTileEntity {
 
     private void playSoundEvent(BlockState blockState, SoundEvent soundEvent) {
         if (this.world != null) {
-            Vec3i vec3i = blockState.get(SakuraBarrelBlock.PROPERTY_FACING).getDirectionVec();
+            Vector3i vec3i = blockState.get(SakuraBarrelBlock.PROPERTY_FACING).getDirectionVec();
             this.world.playSound(
                     null,
                     (double) this.pos.getX() + 0.5D + (double) vec3i.getX() / 2.0D,

@@ -11,7 +11,7 @@ import rocks.sakira.sakurarosea.common.tileentities.renderers.SakuraShieldRender
 import static rocks.sakira.sakurarosea.Constants.MOD_ID;
 
 public class Items {
-    public static final DeferredRegister<Item> REGISTER = new DeferredRegister<>(ForgeRegistries.ITEMS, MOD_ID);
+    public static final DeferredRegister<Item> REGISTER = DeferredRegister.create(ForgeRegistries.ITEMS, MOD_ID);
     private static final ItemGroup GROUP = new SakuraRoseaItemGroup("sakurarosea") {
         @Override
         public ItemStack createIcon() {

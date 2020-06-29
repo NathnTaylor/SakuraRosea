@@ -9,7 +9,7 @@ import rocks.sakira.sakurarosea.common.block.Blocks;
 import static rocks.sakira.sakurarosea.Constants.MOD_ID;
 
 public class TileEntities {
-    public static final DeferredRegister<TileEntityType<?>> REGISTER = new DeferredRegister<>(ForgeRegistries.TILE_ENTITIES, MOD_ID);
+    public static final DeferredRegister<TileEntityType<?>> REGISTER = DeferredRegister.create(ForgeRegistries.TILE_ENTITIES, MOD_ID);
 
     public static final RegistryObject<TileEntityType<SakuraBarrelTileEntity>> SAKURA_BARREL_ENTITY = REGISTER.register(
             "sakura_barrel",

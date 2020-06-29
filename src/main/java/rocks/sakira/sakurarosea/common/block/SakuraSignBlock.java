@@ -3,7 +3,6 @@ package rocks.sakira.sakurarosea.common.block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.*;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.fluid.IFluidState;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.StateContainer;
@@ -17,6 +16,7 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.IWorldReader;
+import net.minecraftforge.common.extensions.IForgeFluidState;
 import rocks.sakira.sakurarosea.common.tileentities.TileEntities;
 
 import javax.annotation.Nullable;
@@ -34,8 +34,8 @@ public class SakuraSignBlock extends StandingSignBlock {
     }
 
     public BlockState getStateForPlacement(BlockItemUseContext context) {
-        IFluidState ifluidstate = context.getWorld().getFluidState(context.getPos());
-        return this.getDefaultState().with(ROTATION, Integer.valueOf(MathHelper.floor((double) ((180.0F + context.getPlacementYaw()) * 16.0F / 360.0F) + 0.5D) & 15)).with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
+        IForgeFluidState fluidState = context.getWorld().getFluidState(context.getPos());
+        return this.getDefaultState().with(ROTATION, Integer.valueOf(MathHelper.floor((double) ((180.0F + context.getPlacementYaw()) * 16.0F / 360.0F) + 0.5D) & 15)).with(WATERLOGGED, Boolean.valueOf(fluidState.getFluidState().getFluid() == Fluids.WATER));
     }
 
     public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos) {

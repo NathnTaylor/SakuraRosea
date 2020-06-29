@@ -12,7 +12,7 @@ import rocks.sakira.sakurarosea.common.wood.FaeWoodType;
 import static rocks.sakira.sakurarosea.Constants.MOD_ID;
 
 public class Blocks {
-    public static final DeferredRegister<Block> REGISTER = new DeferredRegister<>(ForgeRegistries.BLOCKS, MOD_ID);
+    public static final DeferredRegister<Block> REGISTER = DeferredRegister.create(ForgeRegistries.BLOCKS, MOD_ID);
 
     public static final RegistryObject<Block> SAKURA_DOOR_BLOCK = REGISTER.register(
             "sakura_door",
@@ -76,8 +76,7 @@ public class Blocks {
     public static final RegistryObject<Block> SAKURA_LOG_BLOCK = REGISTER.register(
             "sakura_log",
 
-            () -> new LogBlock(
-                    MaterialColor.MAGENTA, //o.0 magenta
+            () -> new Block(
                     Block.Properties.create(Material.WOOD, MaterialColor.MAGENTA)
                             .hardnessAndResistance(2.0F)
                             .sound(SoundType.WOOD)
@@ -111,8 +110,7 @@ public class Blocks {
     public static final RegistryObject<Block> STRIPPED_SAKURA_LOG_BLOCK = REGISTER.register(
             "stripped_sakura_log",
 
-            () -> new LogBlock(
-                    MaterialColor.MAGENTA, //o.0 magenta
+            () -> new Block(
                     Block.Properties.create(Material.WOOD, MaterialColor.MAGENTA)
                             .hardnessAndResistance(2.0F)
                             .sound(SoundType.WOOD)
@@ -122,8 +120,7 @@ public class Blocks {
     public static final RegistryObject<Block> SAKURA_WOOD_BLOCK = REGISTER.register(
             "sakura_wood",
 
-            () -> new LogBlock(
-                    MaterialColor.MAGENTA, //o.0 magenta
+            () -> new Block(
                     Block.Properties.create(Material.WOOD, MaterialColor.MAGENTA)
                             .hardnessAndResistance(2.0F)
                             .sound(SoundType.WOOD)
@@ -133,8 +130,7 @@ public class Blocks {
     public static final RegistryObject<Block> STRIPPED_SAKURA_WOOD_BLOCK = REGISTER.register(
             "stripped_sakura_wood",
 
-            () -> new LogBlock(
-                    MaterialColor.MAGENTA, //o.0 magenta
+            () -> new Block(
                     Block.Properties.create(Material.WOOD, MaterialColor.MAGENTA)
                             .hardnessAndResistance(2.0F)
                             .sound(SoundType.WOOD)

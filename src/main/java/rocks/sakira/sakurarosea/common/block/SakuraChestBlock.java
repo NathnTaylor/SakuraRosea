@@ -144,7 +144,7 @@ public class SakuraChestBlock extends ChestBlock {
     private static boolean isCatSittingOn(IWorld world, BlockPos blockPos) {
         List<CatEntity> catEntities = world.getEntitiesWithinAABB(CatEntity.class, new AxisAlignedBB(blockPos.getX(), blockPos.getY() + 1, blockPos.getZ(), blockPos.getX() + 1, blockPos.getY() + 2, blockPos.getZ() + 1));
         for (CatEntity catEntity : catEntities) {
-            if (catEntity.isSitting()) return true;
+            if (catEntity.func_213416_eg()) return true;  // isSitting
         }
         return false;
     }
