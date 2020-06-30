@@ -76,6 +76,7 @@ public class SakuraRosea {
 
         try {
             // Attempt to grab a reference to the validBlocks set and make it available.
+            // TODO: This needs to be updated when the Forge mappings bot gets 1.16.1 mappings
             f = TileEntityType.SIGN.getClass().getDeclaredField("field_223046_I");
         } catch (NoSuchFieldException e) {
             // We may be in a development environment
