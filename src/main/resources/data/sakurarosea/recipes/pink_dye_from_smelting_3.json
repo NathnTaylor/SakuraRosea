@@ -3,7 +3,7 @@
   "ingredient": {
     "item": "sakurarosea:white_sakura_leaves"
   },
-  "result": "minecraft:white_dye",
+  "result": "minecraft:pink_dye",
   "experience": 1.0,
   "cookingtime": 200
 }
