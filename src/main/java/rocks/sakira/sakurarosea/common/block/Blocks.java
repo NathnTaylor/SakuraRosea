@@ -23,6 +23,22 @@ public class Blocks {
             )
     );
 
+    public static final RegistryObject<Block> WHITE_CLAY_DOOR_BLOCK = REGISTER.register(
+            "white_clay_door",
+
+            () -> new SakuraDoor(
+                    Block.Properties.create(Material.ROCK, MaterialColor.WHITE_TERRACOTTA)
+            )
+    );
+
+    public static final RegistryObject<Block> PINK_CLAY_DOOR_BLOCK = REGISTER.register(
+            "pink_clay_door",
+
+            () -> new SakuraDoor(
+                    Block.Properties.create(Material.ROCK, MaterialColor.MAGENTA)
+            )
+    );
+
     public static final RegistryObject<Block> SAKURA_TRAPDOOR_BLOCK = REGISTER.register(
             "sakura_trapdoor",
 
@@ -266,6 +282,41 @@ public class Blocks {
 
             () -> new SlabBlock(
                     Block.Properties.from(WHITE_BRICKS_BLOCK.get())
+            )
+    );
+
+    public static final RegistryObject<Block> PINK_BRICKS_BLOCK = REGISTER.register(
+            "pink_bricks",
+
+            () -> new Block(
+                    Block.Properties.create(Material.ROCK, MaterialColor.PINK_TERRACOTTA)
+                            .hardnessAndResistance(2.0F, 6.0F)
+                            .sound(SoundType.STONE)
+            )
+    );
+
+    public static final RegistryObject<Block> PINK_BRICKS_STAIRS_BLOCK = REGISTER.register(
+            "pink_bricks_stairs",
+
+            () -> new StairsBlock(
+                    () -> PINK_BRICKS_BLOCK.get().getDefaultState(),
+                    Block.Properties.from(PINK_BRICKS_BLOCK.get())
+            )
+    );
+
+    public static final RegistryObject<Block> PINK_BRICKS_WALL_BLOCK = REGISTER.register(
+            "pink_bricks_wall",
+
+            () -> new WallBlock(
+                    Block.Properties.from(PINK_BRICKS_BLOCK.get())
+            )
+    );
+
+    public static final RegistryObject<Block> PINK_BRICKS_SLAB_BLOCK = REGISTER.register(
+            "pink_bricks_slab",
+
+            () -> new SlabBlock(
+                    Block.Properties.from(PINK_BRICKS_BLOCK.get())
             )
     );
 }

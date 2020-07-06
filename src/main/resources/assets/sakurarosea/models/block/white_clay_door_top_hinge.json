@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_top_rh",
+  "textures": {
+    "bottom": "sakurarosea:blocks/white_clay_door_bottom",
+    "top": "sakurarosea:blocks/white_clay_door_top"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "brick_slab",
+  "pattern": [
+    "xxx"
+  ],
+  "key": {
+    "x": {
+      "item": "sakurarosea:pink_bricks"
+    }
+  },
+  "result": {
+    "item": "sakurarosea:pink_bricks_slab",
+    "count": 6
+  }
+}
