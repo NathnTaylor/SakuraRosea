@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "sakurarosea:item/pink_bricks_door"
+    "layer0": "sakurarosea:item/pink_clay_door"
   }
 }

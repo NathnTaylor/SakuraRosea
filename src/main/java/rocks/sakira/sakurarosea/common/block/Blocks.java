@@ -22,16 +22,16 @@ public class Blocks {
             )
     );
 
-    public static final RegistryObject<Block> WHITE_BRICK_DOOR_BLOCK = REGISTER.register(
-            "white_bricks_door",
+    public static final RegistryObject<Block> WHITE_CLAY_DOOR_BLOCK = REGISTER.register(
+            "white_clay_door",
 
             () -> new SakuraDoor(
                     Block.Properties.create(Material.ROCK, MaterialColor.WHITE_TERRACOTTA)
             )
     );
 
-    public static final RegistryObject<Block> PINK_BRICK_DOOR_BLOCK = REGISTER.register(
-            "pink_bricks_door",
+    public static final RegistryObject<Block> PINK_CLAY_DOOR_BLOCK = REGISTER.register(
+            "pink_clay_door",
 
             () -> new SakuraDoor(
                     Block.Properties.create(Material.ROCK, MaterialColor.MAGENTA)

@@ -36,20 +36,20 @@ public class Items {
             )
     );
 
-    public static final RegistryObject<Item> PINK_BRICK_DOOR_ITEM = REGISTER.register(
-            "pink_bricks_door",
+    public static final RegistryObject<Item> PINK_CLAY_DOOR_ITEM = REGISTER.register(
+            "pink_clay_door",
 
             () -> new BlockItem(
-                    Blocks.PINK_BRICK_DOOR_BLOCK.get().getBlock(),
+                    Blocks.PINK_CLAY_DOOR_BLOCK.get().getBlock(),
                     new Item.Properties().group(GROUP)
             )
     );
 
-    public static final RegistryObject<Item> WHItE_BRICK_DOOR_ITEM = REGISTER.register(
-            "white_bricks_door",
+    public static final RegistryObject<Item> WHItE_CLAY_DOOR_ITEM = REGISTER.register(
+            "white_clay_door",
 
             () -> new BlockItem(
-                    Blocks.WHITE_BRICK_DOOR_BLOCK.get().getBlock(),
+                    Blocks.WHITE_CLAY_DOOR_BLOCK.get().getBlock(),
                     new Item.Properties().group(GROUP)
             )
     );
