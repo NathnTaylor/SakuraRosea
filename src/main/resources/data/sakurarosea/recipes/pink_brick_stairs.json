@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "sakurarosea:pink_bricks"
+    }
+  },
+  "result": {
+    "item": "sakurarosea:pink_bricks_stairs",
+    "count": 4
+  }
+}

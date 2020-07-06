@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "sakurarosea:pink_clay"
+  },
+  "result": "sakurarosea:pink_brick",
+  "experience": 1.0,
+  "cookingtime": 200
+}

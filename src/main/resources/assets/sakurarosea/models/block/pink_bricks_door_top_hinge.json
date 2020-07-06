@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_top_rh",
+  "textures": {
+    "bottom": "sakurarosea:blocks/pink_bricks_door_bottom",
+    "top": "sakurarosea:blocks/pink_bricks_door_top"
+  }
+}

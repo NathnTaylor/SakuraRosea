@@ -36,6 +36,24 @@ public class Items {
             )
     );
 
+    public static final RegistryObject<Item> PINK_BRICK_DOOR_ITEM = REGISTER.register(
+            "pink_bricks_door",
+
+            () -> new BlockItem(
+                    Blocks.PINK_BRICK_DOOR_BLOCK.get().getBlock(),
+                    new Item.Properties().group(GROUP)
+            )
+    );
+
+    public static final RegistryObject<Item> WHItE_BRICK_DOOR_ITEM = REGISTER.register(
+            "white_bricks_door",
+
+            () -> new BlockItem(
+                    Blocks.WHITE_BRICK_DOOR_BLOCK.get().getBlock(),
+                    new Item.Properties().group(GROUP)
+            )
+    );
+
     public static final RegistryObject<Item> SAKURA_DOOR_ITEM = REGISTER.register(
             "sakura_door",
 
@@ -266,6 +284,22 @@ public class Items {
             )
     );
 
+    public static final RegistryObject<Item> PINK_CLAY_ITEM = REGISTER.register(
+            "pink_clay",
+
+            () -> new Item(
+                    new Item.Properties().group(GROUP)
+            )
+    );
+
+    public static final RegistryObject<Item> PINK_BRICK_ITEM = REGISTER.register(
+            "pink_brick",
+
+            () -> new Item(
+                    new Item.Properties().group(GROUP)
+            )
+    );
+
     public static final RegistryObject<Item> WHITE_BRICKS_ITEM = REGISTER.register(
             "white_bricks",
 
@@ -298,6 +332,42 @@ public class Items {
 
             () -> new BlockItem(
                     Blocks.WHITE_BRICKS_SLAB_BLOCK.get().getBlock(),
+                    new Item.Properties().group(GROUP)
+            )
+    );
+    
+    public static final RegistryObject<Item> PINK_BRICKS_ITEM = REGISTER.register(
+            "pink_bricks",
+
+            () -> new BlockItem(
+                    Blocks.PINK_BRICKS_BLOCK.get(),
+                    new Item.Properties().group(GROUP)
+            )
+    );
+
+    public static final RegistryObject<Item> PINK_BRICKS_BLOCK_ITEM = REGISTER.register(
+            "pink_bricks_stairs",
+
+            () -> new BlockItem(
+                    Blocks.PINK_BRICKS_STAIRS_BLOCK.get().getBlock(),
+                    new Item.Properties().group(GROUP)
+            )
+    );
+
+    public static final RegistryObject<Item> PINK_BRICKS_WALL_ITEM = REGISTER.register(
+            "pink_bricks_wall",
+
+            () -> new BlockItem(
+                    Blocks.PINK_BRICKS_WALL_BLOCK.get().getBlock(),
+                    new Item.Properties().group(GROUP)
+            )
+    );
+
+    public static final RegistryObject<Item> PINK_BRICKS_SLAB_ITEM = REGISTER.register(
+            "pink_bricks_slab",
+
+            () -> new BlockItem(
+                    Blocks.PINK_BRICKS_SLAB_BLOCK.get().getBlock(),
                     new Item.Properties().group(GROUP)
             )
     );

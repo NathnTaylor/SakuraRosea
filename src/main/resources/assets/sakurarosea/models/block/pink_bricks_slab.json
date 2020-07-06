@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "sakurarosea:blocks/pink_bricks",
+    "top": "sakurarosea:blocks/pink_bricks",
+    "side": "sakurarosea:blocks/pink_bricks"
+  }
+}

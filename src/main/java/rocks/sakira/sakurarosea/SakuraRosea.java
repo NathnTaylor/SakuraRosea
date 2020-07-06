@@ -110,6 +110,7 @@ public class SakuraRosea {
     @SubscribeEvent
     public void clientSetup(final FMLClientSetupEvent event) {
         RenderTypeLookup.setRenderLayer(Blocks.SAKURA_SAPLING_BLOCK.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(Blocks.PINK_BRICK_DOOR_BLOCK.get(), RenderType.getCutout());
 
         ClientRegistry.bindTileEntityRenderer(
                 TileEntities.SAKURA_CHEST_ENTITY.get(),
