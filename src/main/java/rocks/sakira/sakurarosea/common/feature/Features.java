@@ -1,8 +1,8 @@
 package rocks.sakira.sakurarosea.common.feature;
 
+import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.TreeFeature;
-import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;

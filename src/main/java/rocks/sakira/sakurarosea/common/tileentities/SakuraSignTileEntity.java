@@ -57,7 +57,7 @@ public class SakuraSignTileEntity extends SignTileEntity {
             ITextComponent itextcomponent = ITextComponent.Serializer.func_240643_a_(s.isEmpty() ? "\"\"" : s);
             if (this.world instanceof ServerWorld) {
                 try {
-                    this.signText[i] = TextComponentUtils.func_240645_a_(this.getCommandSource((ServerPlayerEntity) null), itextcomponent, (Entity) null, 0);
+                    this.signText[i] = TextComponentUtils.func_240645_a_(this.getCommandSource(null), itextcomponent, null, 0);
                 } catch (CommandSyntaxException commandsyntaxexception) {
                     this.signText[i] = itextcomponent;
                 }

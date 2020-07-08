@@ -7,18 +7,15 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.StandingSignBlock;
 import net.minecraft.block.WallSignBlock;
 import net.minecraft.client.gui.FontRenderer;
-import net.minecraft.client.gui.RenderComponentsUtil;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.model.RenderMaterial;
-import net.minecraft.util.math.vector.Vector3f;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.model.Model;
 import net.minecraft.client.renderer.model.ModelRenderer;
+import net.minecraft.client.renderer.model.RenderMaterial;
 import net.minecraft.client.renderer.texture.NativeImage;
 import net.minecraft.client.renderer.tileentity.TileEntityRenderer;
 import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
-import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.math.vector.Vector3f;
 import net.minecraft.util.text.ITextProperties;
 import net.minecraft.util.text.Style;
 import net.minecraftforge.api.distmarker.Dist;
@@ -75,14 +72,14 @@ public class SakuraSignTileEntityRenderer extends TileEntityRenderer<SakuraSignT
         int l = (int) ((double) NativeImage.getBlue(i) * 0.4D);
         int i1 = NativeImage.getCombined(0, l, k, j);
 
-        for(int k1 = 0; k1 < 4; ++k1) {
+        for (int k1 = 0; k1 < 4; ++k1) {
             ITextProperties itextproperties = tileEntityIn.func_235677_a_(k1, (p_239309_1_) -> {
                 List<ITextProperties> list = fontrenderer.func_238420_b_().func_238362_b_(p_239309_1_, 90, Style.field_240709_b_);
                 return list.isEmpty() ? ITextProperties.field_240651_c_ : list.get(0);
             });
             if (itextproperties != null) {
-                float f3 = (float)(-fontrenderer.func_238414_a_(itextproperties) / 2);
-                fontrenderer.func_238416_a_(itextproperties, f3, (float)(k1 * 10 - 20), i1, false, matrixStackIn.getLast().getMatrix(), bufferIn, false, 0, combinedLightIn);
+                float f3 = (float) (-fontrenderer.func_238414_a_(itextproperties) / 2);
+                fontrenderer.func_238416_a_(itextproperties, f3, (float) (k1 * 10 - 20), i1, false, matrixStackIn.getLast().getMatrix(), bufferIn, false, 0, combinedLightIn);
             }
         }
 

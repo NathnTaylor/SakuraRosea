@@ -10,7 +10,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.TextureStitchEvent;
-import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import rocks.sakira.sakurarosea.common.Materials;
 import rocks.sakira.sakurarosea.common.block.Blocks;
