@@ -31,10 +31,8 @@ import rocks.sakira.sakurarosea.common.block.SakuraChestBlock;
 
 import javax.annotation.Nullable;
 
-public class SakuraChestTileEntity extends ChestTileEntity implements IChestLid, ITickableTileEntity {
+public class SakuraChestTileEntity extends ChestTileEntity implements ITickableTileEntity {
     private NonNullList<ItemStack> chestContents = NonNullList.withSize(27, ItemStack.EMPTY);
-    private float lidAngle;
-    private float prevLidAngle;
     private int numPlayersUsing;
     private int ticksSinceSync;
     private LazyOptional<IItemHandlerModifiable> chestHandler;
@@ -128,12 +126,6 @@ public class SakuraChestTileEntity extends ChestTileEntity implements IChestLid,
             }
         }
         return true;
-    }
-
-    @Override
-    @OnlyIn(Dist.CLIENT)
-    public float getLidAngle(float partialTicks) {
-        return MathHelper.lerp(partialTicks, this.prevLidAngle, this.lidAngle);
     }
 
     @Override
