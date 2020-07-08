@@ -1,6 +1,7 @@
 package rocks.sakira.sakurarosea.common.item;
 
 import net.minecraft.item.*;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -203,8 +204,7 @@ public class Items {
 
             () -> new BlockItem(
                     Blocks.SAKURA_CHEST_BLOCK.get().getBlock(),
-                    new Item.Properties().group(GROUP)
-                            .setISTER(() -> SakuraChestItemStackRenderer::new)
+                    getPropsForChest()
             )
     );
 
@@ -258,14 +258,7 @@ public class Items {
     public static final RegistryObject<Item> SAKURA_SHIELD_ITEM = REGISTER.register(
             "sakura_shield",
 
-            () -> new ShieldItem(
-                    new Item.Properties()
-                            .maxDamage(336)
-                            .group(GROUP)
-                            .setISTER(
-                                    () -> SakuraShieldRenderer::new
-                            )
-            )
+            () -> new ShieldItem(getPropsForShield())
     );
 
     public static final RegistryObject<Item> WHITE_CLAY_ITEM = REGISTER.register(
@@ -335,7 +328,7 @@ public class Items {
                     new Item.Properties().group(GROUP)
             )
     );
-    
+
     public static final RegistryObject<Item> PINK_BRICKS_ITEM = REGISTER.register(
             "pink_bricks",
 
@@ -371,4 +364,28 @@ public class Items {
                     new Item.Properties().group(GROUP)
             )
     );
+
+    private static Item.Properties getPropsForShield() {
+        Item.Properties props = new Item.Properties().
+                maxDamage(336)
+                .group(GROUP);
+
+        DistExecutor.runForDist(
+                () -> () -> props.setISTER(() -> SakuraShieldRenderer::new),
+                () -> () -> props
+        );
+
+        return props;
+    }
+
+    private static Item.Properties getPropsForChest() {
+        Item.Properties props = new Item.Properties().group(GROUP);
+
+        DistExecutor.runForDist(
+                () -> () -> props.setISTER(() -> SakuraChestItemStackRenderer::new),
+                () -> () -> props
+        );
+
+        return props;
+    }
 }
