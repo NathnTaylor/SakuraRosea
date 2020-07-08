@@ -81,11 +81,6 @@ public class SakuraChestTileEntity extends ChestTileEntity implements IChestLid,
     }
 
     @Override
-    public boolean canRenderBreaking() {
-        return true;
-    }
-
-    @Override
     public CompoundNBT write(CompoundNBT compound) {
         super.write(compound);
         if (!this.checkLootAndWrite(compound)) {
