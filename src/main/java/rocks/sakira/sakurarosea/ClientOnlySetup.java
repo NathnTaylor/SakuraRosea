@@ -4,7 +4,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.Atlases;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
-import net.minecraft.client.renderer.model.Material;
+import net.minecraft.client.renderer.model.RenderMaterial;
 import net.minecraft.client.renderer.texture.AtlasTexture;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
@@ -26,7 +26,7 @@ import static rocks.sakira.sakurarosea.Constants.MOD_ID;
 public class ClientOnlySetup {
     @OnlyIn(Dist.CLIENT)
     public static void setup() {
-        Atlases.SIGN_MATERIALS.put(FaeWoodType.SAKURA, new Material(Atlases.SIGN_ATLAS, new ResourceLocation(MOD_ID, "entity/signs/sakura")));
+        Atlases.SIGN_MATERIALS.put(FaeWoodType.SAKURA, new RenderMaterial(Atlases.SIGN_ATLAS, new ResourceLocation(MOD_ID, "entity/signs/sakura")));
 
         RenderTypeLookup.setRenderLayer(Blocks.PINK_CLAY_DOOR_BLOCK.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(Blocks.SAKURA_SAPLING_BLOCK.get(), RenderType.getCutout());
