@@ -1,6 +1,7 @@
 package rocks.sakira.sakurarosea.common.particle;
 
 import net.minecraft.client.particle.*;
+import net.minecraft.client.world.ClientWorld;
 import net.minecraft.particles.BasicParticleType;
 import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
@@ -8,7 +9,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 @OnlyIn(Dist.CLIENT)
 public class SakuraLeafParticle extends SpriteTexturedParticle {
-    protected SakuraLeafParticle(World world, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed) {
+    protected SakuraLeafParticle(ClientWorld world, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed) {
         super(world, x, y, z, xSpeed, ySpeed, zSpeed);
 
         this.particleScale *= 1.2f;
@@ -71,7 +72,7 @@ public class SakuraLeafParticle extends SpriteTexturedParticle {
             this.spriteSet = sprite;
         }
 
-        public Particle makeParticle(BasicParticleType type, World world, double x, double y, double z, double r, double g, double b) {
+        public Particle makeParticle(BasicParticleType type, ClientWorld world, double x, double y, double z, double r, double g, double b) {
             SakuraLeafParticle particle = new SakuraLeafParticle(
                     world,
                     x, y, z,
