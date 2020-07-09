@@ -54,7 +54,8 @@ public class Blocks {
     public static final RegistryObject<Block> SAKURA_LEAVES_BLOCK = REGISTER.register(
             "sakura_leaves",
 
-            () -> new LeavesBlock(
+            () -> new SakuraLeavesBlock(
+                    0xFFD4E2,
                     Block.Properties.create(Material.LEAVES, MaterialColor.MAGENTA)
                             .hardnessAndResistance(0.2F)
                             .notSolid()
@@ -65,7 +66,8 @@ public class Blocks {
     public static final RegistryObject<Block> ALT_SAKURA_LEAVES_BLOCK = REGISTER.register(
             "alt_sakura_leaves",
 
-            () -> new LeavesBlock(
+            () -> new SakuraLeavesBlock(
+                    0xFFEDF1,
                     Block.Properties.create(Material.LEAVES, MaterialColor.MAGENTA)
                             .hardnessAndResistance(0.2F)
                             .notSolid()
@@ -76,7 +78,8 @@ public class Blocks {
     public static final RegistryObject<Block> WHITE_SAKURA_LEAVES_BLOCK = REGISTER.register(
             "white_sakura_leaves",
 
-            () -> new LeavesBlock(
+            () -> new SakuraLeavesBlock(
+                    0xFFFFFF,
                     Block.Properties.create(Material.LEAVES, MaterialColor.MAGENTA)
                             .hardnessAndResistance(0.2F)
                             .notSolid()

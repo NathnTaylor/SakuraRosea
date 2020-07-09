@@ -15,6 +15,7 @@ import rocks.sakira.sakurarosea.common.Materials;
 import rocks.sakira.sakurarosea.common.block.Blocks;
 import rocks.sakira.sakurarosea.common.entities.Entities;
 import rocks.sakira.sakurarosea.common.entities.renderers.SakuraBoatEntityRenderer;
+import rocks.sakira.sakurarosea.common.particle.Particles;
 import rocks.sakira.sakurarosea.common.tileentities.TileEntities;
 import rocks.sakira.sakurarosea.common.tileentities.renderers.SakuraChestTileEntityRenderer;
 import rocks.sakira.sakurarosea.common.tileentities.renderers.SakuraSignTileEntityRenderer;
@@ -63,5 +64,9 @@ public class ClientOnlySetup {
             event.addSprite(Materials.SAKURA_SHIELD_BASE.getTextureLocation());
             event.addSprite(Materials.SAKURA_SHIELD_NO_PATTERN.getTextureLocation());
         }
+    }
+
+    public static void registerParticleFactories() {
+        Particles.registerFactories();
     }
 }
