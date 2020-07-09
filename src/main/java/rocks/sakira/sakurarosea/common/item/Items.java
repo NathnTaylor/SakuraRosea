@@ -365,6 +365,33 @@ public class Items {
             )
     );
 
+    public static final RegistryObject<Item> SAKURA_LEAF_CARPET_ITEM = REGISTER.register(
+            "sakura_leaf_carpet",
+
+            () -> new BlockItem(
+                    Blocks.SAKURA_LEAF_CARPET.get(),
+                    new Item.Properties().group(GROUP)
+            )
+    );
+
+    public static final RegistryObject<Item> ALT_SAKURA_LEAF_CARPET_ITEM = REGISTER.register(
+            "alt_sakura_leaf_carpet",
+
+            () -> new BlockItem(
+                    Blocks.ALT_SAKURA_LEAF_CARPET.get(),
+                    new Item.Properties().group(GROUP)
+            )
+    );
+
+    public static final RegistryObject<Item> WHITE_SAKURA_LEAF_CARPET_ITEM = REGISTER.register(
+            "white_sakura_leaf_carpet",
+
+            () -> new BlockItem(
+                    Blocks.WHITE_SAKURA_LEAF_CARPET.get(),
+                    new Item.Properties().group(GROUP)
+            )
+    );
+
     private static Item.Properties getPropsForShield() {
         Item.Properties props = new Item.Properties().
                 maxDamage(336)

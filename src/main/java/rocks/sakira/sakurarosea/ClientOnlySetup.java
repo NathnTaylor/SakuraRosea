@@ -33,6 +33,10 @@ public class ClientOnlySetup {
         RenderTypeLookup.setRenderLayer(Blocks.SAKURA_SAPLING_BLOCK.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(Blocks.WHITE_CLAY_DOOR_BLOCK.get(), RenderType.getCutout());
 
+        RenderTypeLookup.setRenderLayer(Blocks.SAKURA_LEAF_CARPET.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(Blocks.ALT_SAKURA_LEAF_CARPET.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(Blocks.WHITE_SAKURA_LEAF_CARPET.get(), RenderType.getCutout());
+
         ClientRegistry.bindTileEntityRenderer(
                 TileEntities.SAKURA_CHEST_ENTITY.get(),
                 SakuraChestTileEntityRenderer::new

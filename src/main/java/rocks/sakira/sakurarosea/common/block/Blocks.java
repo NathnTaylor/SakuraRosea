@@ -54,7 +54,7 @@ public class Blocks {
             "sakura_leaves",
 
             () -> new SakuraLeavesBlock(
-                    0xFFD4E2,
+                    0xFFEDF1,
                     Block.Properties.create(Material.LEAVES, MaterialColor.MAGENTA)
                             .hardnessAndResistance(0.2F)
                             .notSolid()
@@ -66,7 +66,7 @@ public class Blocks {
             "alt_sakura_leaves",
 
             () -> new SakuraLeavesBlock(
-                    0xFFEDF1,
+                    0xFFD4E2,
                     Block.Properties.create(Material.LEAVES, MaterialColor.MAGENTA)
                             .hardnessAndResistance(0.2F)
                             .notSolid()
@@ -309,6 +309,42 @@ public class Blocks {
 
             () -> new SlabBlock(
                     Block.Properties.from(PINK_BRICKS_BLOCK.get())
+            )
+    );
+
+    public static final RegistryObject<Block> SAKURA_LEAF_CARPET = REGISTER.register(
+            "sakura_leaf_carpet",
+
+            () -> new SakuraLeafCarpet(
+                    Block.Properties.create(Material.LEAVES)
+                            .notSolid()
+                            .hardnessAndResistance(0.2F)
+                            .tickRandomly()
+                            .sound(SoundType.PLANT)
+            )
+    );
+
+    public static final RegistryObject<Block> ALT_SAKURA_LEAF_CARPET = REGISTER.register(
+            "alt_sakura_leaf_carpet",
+
+            () -> new SakuraLeafCarpet(
+                    Block.Properties.create(Material.LEAVES)
+                            .notSolid()
+                            .hardnessAndResistance(0.2F)
+                            .tickRandomly()
+                            .sound(SoundType.PLANT)
+            )
+    );
+
+    public static final RegistryObject<Block> WHITE_SAKURA_LEAF_CARPET = REGISTER.register(
+            "white_sakura_leaf_carpet",
+
+            () -> new SakuraLeafCarpet(
+                    Block.Properties.create(Material.LEAVES)
+                            .notSolid()
+                            .hardnessAndResistance(0.2F)
+                            .tickRandomly()
+                            .sound(SoundType.PLANT)
             )
     );
 }
