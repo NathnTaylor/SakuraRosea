@@ -5,6 +5,7 @@ import net.minecraft.block.Block;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.client.event.ParticleFactoryRegisterEvent;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -19,6 +20,7 @@ import rocks.sakira.sakurarosea.common.entities.Entities;
 import rocks.sakira.sakurarosea.common.event.BlockClickedEventHandler;
 import rocks.sakira.sakurarosea.common.feature.Features;
 import rocks.sakira.sakurarosea.common.item.Items;
+import rocks.sakira.sakurarosea.common.particle.Particles;
 import rocks.sakira.sakurarosea.common.tileentities.TileEntities;
 import rocks.sakira.sakurarosea.common.world.biome.Biomes;
 
@@ -37,6 +39,7 @@ public class SakuraRosea {
 
         eventBus.register(this);
         eventBus.register(BlockClickedEventHandler.class);
+        eventBus.register(Particles.class);
 
         Biomes.REGISTER.register(eventBus);
         Blocks.REGISTER.register(eventBus);
@@ -101,4 +104,8 @@ public class SakuraRosea {
     public void textureStitchPre(final TextureStitchEvent.Pre event) {
         ClientOnlySetup.textureStitchPre(event);
     }
+
+    @SubscribeEvent
+    @OnlyIn(Dist.CLIENT)
+    public void registerParticleFactory(final ParticleFactoryRegisterEvent event) { ClientOnlySetup.registerParticleFactories(); }
 }
