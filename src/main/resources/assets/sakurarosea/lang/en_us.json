@@ -54,5 +54,9 @@
   "block.sakurarosea.pink_clay_door": "Pink Clay Door",
   "block.sakurarosea.pink_bricks_slab": "Pink Brick Slab",
   "block.sakurarosea.pink_bricks_stairs": "Pink Brick Stairs",
-  "block.sakurarosea.pink_bricks_wall": "Pink Brick Wall"
+  "block.sakurarosea.pink_bricks_wall": "Pink Brick Wall",
+
+  "block.sakurarosea.sakura_leaf_carpet": "Pale Sakura Leaf Carpet",
+  "block.sakurarosea.alt_sakura_leaf_carpet": "Pink Sakura Leaf Carpet",
+  "block.sakurarosea.white_sakura_leaf_carpet": "White Sakura Leaf Carpet"
 }

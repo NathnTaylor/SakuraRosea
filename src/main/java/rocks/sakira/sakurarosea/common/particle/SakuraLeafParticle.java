@@ -16,10 +16,10 @@ public class SakuraLeafParticle extends SpriteTexturedParticle {
 
         int i = (int) (32.0D / (Math.random() * 0.8D + 0.2D));
 
-        this.maxAge = (int) Math.max((float) i * 1.8F, 2.0F);
+        this.maxAge = (int) Math.max((float) i * 3.8F, 6.0F);
         this.particleAngle = (float) Math.random() * ((float) Math.PI * 2F);
 
-        this.motionY = Math.min(this.motionY, -0.03d);
+        this.motionY = Math.min(this.motionY, -0.05d);
     }
 
     @Override
@@ -52,7 +52,7 @@ public class SakuraLeafParticle extends SpriteTexturedParticle {
             }
 
             this.motionY -= 0.002F;
-            this.motionY = Math.max(this.motionY, -0.03d);
+            this.motionY = Math.max(this.motionY, -0.05d);
 
             this.prevParticleAngle = this.particleAngle;
 
@@ -79,7 +79,7 @@ public class SakuraLeafParticle extends SpriteTexturedParticle {
 
                     Math.max(Math.min(world.rand.nextDouble() - 0.5d, 0.05d), -0.05d),  // X speed
                     Math.max(Math.min(world.rand.nextDouble() - 0.5d, 0.05d), -0.05d),  // Y speed
-                    0.03d   // Z speed
+                    0.05d   // Z speed
             );
 
             particle.setColor((float) r, (float) g, (float) b);

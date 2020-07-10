@@ -43,16 +43,20 @@
   "item.sakurarosea.white_clay": "Arcilla blanca",
   "item.sakurarosea.white_brick": "Ladrillo blanco",
   "block.sakurarosea.white_bricks": "Ladrillos blancos",
-  "block.sakurarosea.white_clay_door": "Puerta de arcilla blancos",
+  "block.sakurarosea.white_clay_door": "Puerta de arcilla blanca",
   "block.sakurarosea.white_bricks_slab": "Baldosa de ladrillos blancos",
   "block.sakurarosea.white_bricks_stairs": "Escaleras de ladrillos blancos",
   "block.sakurarosea.white_bricks_wall": "Pared de ladrillos blancos",
 
-  "item.sakurarosea.pink_clay": "Pink Clay",
-  "item.sakurarosea.pink_brick": "Pink Brick",
-  "block.sakurarosea.pink_bricks": "Pink Bricks",
-  "block.sakurarosea.pink_clay_door": "Pink Clay Door",
-  "block.sakurarosea.pink_bricks_slab": "Pink Brick Slab",
-  "block.sakurarosea.pink_bricks_stairs": "Pink Brick Stairs",
-  "block.sakurarosea.pink_bricks_wall": "Pink Brick Wall"
+  "item.sakurarosea.pink_clay": "Arcilla rosa",
+  "item.sakurarosea.pink_brick": "Ladrillo rosa",
+  "block.sakurarosea.pink_bricks": "Ladrillos rosas",
+  "block.sakurarosea.pink_clay_door": "Puerta de arcilla rosa",
+  "block.sakurarosea.pink_bricks_slab": "Baldosa de ladrillos rosas",
+  "block.sakurarosea.pink_bricks_stairs": "Escaleras de ladrillos rosas",
+  "block.sakurarosea.pink_bricks_wall": "Pared de ladrillos rosas",
+
+  "block.sakurarosea.sakura_leaf_carpet": "Alfombra de flores de sakura blancas",
+  "block.sakurarosea.alt_sakura_leaf_carpet": "Alfombra de flores de sakura",
+  "block.sakurarosea.white_sakura_leaf_carpet": "Alfombra de flores de sakura fucsias"
 }
