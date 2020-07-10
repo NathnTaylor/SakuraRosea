@@ -115,31 +115,30 @@ public class SakuraRosea {
 
             Field modifiers = Field.class.getDeclaredField("modifiers");
 
-            // Bypass `final` modifier.
             modifiers.setAccessible(true);
-            modifiers.setInt(f, f.getModifiers() & ~Modifier.FINAL);
+            modifiers.setInt(f, f.getModifiers() & ~Modifier.FINAL);  // Bypass `final` modifier.
 
-            // Get the current array of biome IDs
+            // Get the current array of biome IDs.
             int[] givenBiomeIds = (int[]) f.get(BiomeLayer.class);
 
-            // Create a new array with our IDs
+            // Create a new array with our IDs.
             int[] biomeIDs = new int[givenBiomeIds.length + 1];
 
-            // Add all the current IDs to the new array
+            // Add all the current IDs to the new array.
             for (int i = 0; i < givenBiomeIds.length; i += 1) {
                 biomeIDs[i] = givenBiomeIds[i];
             }
 
-            // Add our biome to the list
+            // Add our biomes to the array.
             biomeIDs[givenBiomeIds.length] = Registry.BIOME.getId(Biomes.SAKURA_FOREST_BIOME.get());
 
             // Finally, update the reference within the BiomeLayer class to the array we just made.
             f.set(BiomeLayer.class, biomeIDs);
         } catch (IllegalAccessException e) {
             // If it didn't work, we should log the problem and then re-throw the exception.
-            // If this fails, signs won't work - it's better to crash the game than allow it
-            // to run with broken blocks or tile entities.
-            LOGGER.error("Failed to set up allowable sign block types", e);
+            // If this fails, biomes won't generate - it's better to crash the game than allow it
+            // to run with broken or inconsistent world generation.
+            LOGGER.error("Failed to set up our custom biomes", e);
             throw e;
         }
     }
