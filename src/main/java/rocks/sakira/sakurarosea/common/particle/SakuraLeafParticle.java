@@ -15,7 +15,7 @@ public class SakuraLeafParticle extends SpriteTexturedParticle {
 
         int i = (int) (32.0D / (Math.random() * 0.8D + 0.2D));
 
-        this.maxAge = (int) Math.max((float) i * 1.8F, 2.0F);
+        this.maxAge = (int) Math.max((float) i * 3.8F, 6.0F);
         this.particleAngle = (float) Math.random() * ((float) Math.PI * 2F);
 
         this.motionY = Math.min(this.motionY, -0.03d);
