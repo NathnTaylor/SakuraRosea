@@ -3,6 +3,8 @@ package rocks.sakira.sakurarosea;
 import com.google.common.collect.ImmutableSet;
 import net.minecraft.block.Block;
 import net.minecraft.tileentity.TileEntityType;
+import net.minecraft.util.registry.Registry;
+import net.minecraft.world.gen.layer.BiomeLayer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.ParticleFactoryRegisterEvent;
@@ -25,6 +27,7 @@ import rocks.sakira.sakurarosea.common.tileentities.TileEntities;
 import rocks.sakira.sakurarosea.common.world.biome.Biomes;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.Set;
 
@@ -56,6 +59,11 @@ public class SakuraRosea {
         Biomes.registerTypes();
         Biomes.registerEntries();
 
+        setupBiomes();
+        setupSigns();
+    }
+
+    private void setupSigns() throws IllegalAccessException, NoSuchFieldException {
         // This block is pretty hacky, but I can't think of a better way to do this.
         // This is likely to break between major Forge versions.
         Field f;
@@ -85,6 +93,48 @@ public class SakuraRosea {
 
             // Finally, update the reference within the SIGN TileEntityType to the set we just made.
             f.set(TileEntityType.SIGN, allAllowedBlocks);
+        } catch (IllegalAccessException e) {
+            // If it didn't work, we should log the problem and then re-throw the exception.
+            // If this fails, signs won't work - it's better to crash the game than allow it
+            // to run with broken blocks or tile entities.
+            LOGGER.error("Failed to set up allowable sign block types", e);
+            throw e;
+        }
+    }
+
+    private void setupBiomes() throws NoSuchFieldException, IllegalAccessException {
+        // This block is pretty hacky, but Forge hasn't fixed overworld biome registration yet.
+        // This is likely to break between major Forge versions, and will be redundant eventually.
+        Field f;
+
+        // Attempt to grab a reference to the biomes array and make it available.
+        f = BiomeLayer.class.getDeclaredField("field_202745_s");
+
+        try {
+            f.setAccessible(true);  // Bypass `private` access modifier.
+
+            Field modifiers = Field.class.getDeclaredField("modifiers");
+
+            // Bypass `final` modifier.
+            modifiers.setAccessible(true);
+            modifiers.setInt(f, f.getModifiers() & ~Modifier.FINAL);
+
+            // Get the current array of biome IDs
+            int[] givenBiomeIds = (int[]) f.get(BiomeLayer.class);
+
+            // Create a new array with our IDs
+            int[] biomeIDs = new int[givenBiomeIds.length + 1];
+
+            // Add all the current IDs to the new array
+            for (int i = 0; i < givenBiomeIds.length; i += 1) {
+                biomeIDs[i] = givenBiomeIds[i];
+            }
+
+            // Add our biome to the list
+            biomeIDs[givenBiomeIds.length] = Registry.BIOME.getId(Biomes.SAKURA_FOREST_BIOME.get());
+
+            // Finally, update the reference within the BiomeLayer class to the array we just made.
+            f.set(BiomeLayer.class, biomeIDs);
         } catch (IllegalAccessException e) {
             // If it didn't work, we should log the problem and then re-throw the exception.
             // If this fails, signs won't work - it's better to crash the game than allow it
