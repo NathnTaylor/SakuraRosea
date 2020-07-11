@@ -84,6 +84,8 @@ dependencies {
 }
 
 jar {
+    classifier 'MC1.15.2'
+
     manifest {
         attributes([
             "Specification-Title": "sakurarosea",
