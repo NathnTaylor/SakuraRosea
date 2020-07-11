@@ -84,7 +84,7 @@ dependencies {
 }
 
 jar {
-    classifier 'MC1.15.2'
+    classifier 'MC1.16.1'
 
     manifest {
         attributes([
