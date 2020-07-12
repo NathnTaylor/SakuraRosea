@@ -22,10 +22,10 @@ public class SupplierSaplingBlock extends SaplingBlock {
     @Override
     public void func_226942_a_(ServerWorld p_226942_1_, BlockPos p_226942_2_, BlockState p_226942_3_, Random p_226942_4_) {
         if (p_226942_3_.get(STAGE) == 0) {
-            p_226942_1_.setBlockState(p_226942_2_, p_226942_3_.cycle(STAGE), 4);
+            p_226942_1_.setBlockState(p_226942_2_, p_226942_3_.func_235896_a_(STAGE), 4);
         } else {
             if (!net.minecraftforge.event.ForgeEventFactory.saplingGrowTree(p_226942_1_, p_226942_4_, p_226942_2_)) return;
-            this.treeSupplier.get().place(p_226942_1_, p_226942_1_.getChunkProvider().getChunkGenerator(), p_226942_2_, p_226942_3_, p_226942_4_);
+            this.treeSupplier.get().func_230339_a_(p_226942_1_, p_226942_1_.getChunkProvider().getChunkGenerator(), p_226942_2_, p_226942_3_, p_226942_4_);
         }
     }
 }
