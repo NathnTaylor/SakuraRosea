@@ -6,6 +6,7 @@ import net.minecraft.block.material.MaterialColor;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import rocks.sakira.sakurarosea.common.block.trees.SakuraTree;
 import rocks.sakira.sakurarosea.common.tileentities.TileEntities;
 import rocks.sakira.sakurarosea.common.wood.FaeWoodType;
 
@@ -122,7 +123,8 @@ public class Blocks {
     public static final RegistryObject<Block> SAKURA_SAPLING_BLOCK = REGISTER.register(
             "sakura_sapling",
 
-            () -> new SakuraSaplingBlock(
+            () -> new SupplierSaplingBlock(
+                    SakuraTree::new,
                     Block.Properties.create(Material.PLANTS, MaterialColor.MAGENTA)
                             .doesNotBlockMovement()
                             .hardnessAndResistance(0F)
