@@ -11,8 +11,10 @@ import net.minecraftforge.client.event.ParticleFactoryRegisterEvent;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -36,7 +38,7 @@ import static rocks.sakira.sakurarosea.Constants.MOD_ID;
 
 @Mod(MOD_ID)
 public class SakuraRosea {
-    private static final Logger LOGGER = LogManager.getLogger();
+    private static final Logger LOGGER = LogManager.getLogger("SakuraRosea");
 
     public SakuraRosea() {
         final IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -51,6 +53,8 @@ public class SakuraRosea {
         Features.REGISTER.register(eventBus);
         Items.REGISTER.register(eventBus);
         TileEntities.REGISTER.register(eventBus);
+
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.CONFIG);
     }
 
     @SubscribeEvent
