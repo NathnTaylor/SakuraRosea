@@ -12,6 +12,7 @@ import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -64,22 +65,10 @@ public class SakuraRosea {
     }
 
     private void setupSigns() throws IllegalAccessException, NoSuchFieldException {
-        // This block is pretty hacky, but I can't think of a better way to do this.
-        // This is likely to break between major Forge versions.
-        Field f;
+        // This allows our signs to render correctly.
+        Field f = ObfuscationReflectionHelper.findField(TileEntityType.class, "field_223046_I");
 
         try {
-            // Attempt to grab a reference to the validBlocks set and make it available.
-            // TODO: This needs to be updated when the Forge mappings bot gets 1.16.1 mappings
-            f = TileEntityType.SIGN.getClass().getDeclaredField("field_223046_I");
-        } catch (NoSuchFieldException e) {
-            // We may be in a development environment
-            f = TileEntityType.SIGN.getClass().getDeclaredField("validBlocks");
-        }
-
-        try {
-            f.setAccessible(true);  // Bypass `private` access modifier.
-
             // Create a list based on the current allowed blocks set, so we can add ours.
             Set<Block> allowedBlocks = (Set<Block>) f.get(TileEntityType.SIGN);
             ArrayList<Block> blocks = new ArrayList<>(allowedBlocks);
@@ -103,16 +92,10 @@ public class SakuraRosea {
     }
 
     private void setupBiomes() throws NoSuchFieldException, IllegalAccessException {
-        // This block is pretty hacky, but Forge hasn't fixed overworld biome registration yet.
-        // This is likely to break between major Forge versions, and will be redundant eventually.
-        Field f;
-
-        // Attempt to grab a reference to the biomes array and make it available.
-        f = BiomeLayer.class.getDeclaredField("field_202745_s");
+        // Forge hasn't yet implemented overworld biome registration, so we do it ourselves.
+        Field f = ObfuscationReflectionHelper.findField(BiomeLayer.class, "field_202745_s");
 
         try {
-            f.setAccessible(true);  // Bypass `private` access modifier.
-
             Field modifiers = Field.class.getDeclaredField("modifiers");
 
             modifiers.setAccessible(true);
@@ -157,5 +140,7 @@ public class SakuraRosea {
 
     @SubscribeEvent
     @OnlyIn(Dist.CLIENT)
-    public void registerParticleFactory(final ParticleFactoryRegisterEvent event) { ClientOnlySetup.registerParticleFactories(); }
+    public void registerParticleFactory(final ParticleFactoryRegisterEvent event) {
+        ClientOnlySetup.registerParticleFactories();
+    }
 }
