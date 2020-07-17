@@ -6,10 +6,15 @@ import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import rocks.sakira.sakurarosea.Config;
 
 import static rocks.sakira.sakurarosea.Constants.MOD_ID;
 
 public class Biomes {
+    private static final Logger LOGGER = LogManager.getLogger("SakuraRosea/Biomes");
+
     public static final DeferredRegister<Biome> REGISTER = new DeferredRegister<>(ForgeRegistries.BIOMES, MOD_ID);
 
     public static final RegistryObject<Biome> SAKURA_FOREST_HILLS_BIOME = REGISTER.register(
@@ -50,7 +55,26 @@ public class Biomes {
     }
 
     public static void registerEntries() {
-        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(SAKURA_FOREST_BIOME.get(), 10));
-        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(SAKURA_FOREST_HILLS_BIOME.get(), 10));
+        int weight = Config.BIOME_SPAWN_WEIGHT.get();
+
+        if (weight > 0) {
+            BiomeManager.addBiome(
+                    BiomeManager.BiomeType.WARM,
+                    new BiomeManager.BiomeEntry(
+                            SAKURA_FOREST_BIOME.get(),
+                            weight
+                    )
+            );
+
+            BiomeManager.addBiome(
+                    BiomeManager.BiomeType.WARM,
+                    new BiomeManager.BiomeEntry(
+                            SAKURA_FOREST_HILLS_BIOME.get(),
+                            weight
+                    )
+            );
+        } else {
+            LOGGER.info("Biomes have been configured not to spawn; not registering with biome manager.");
+        }
     }
 }
