@@ -2,6 +2,7 @@ package rocks.sakira.sakurarosea;
 
 import com.google.common.collect.ImmutableSet;
 import net.minecraft.block.Block;
+import net.minecraft.block.FlowerPotBlock;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -29,6 +30,7 @@ import rocks.sakira.sakurarosea.common.world.biome.Biomes;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Set;
 
 import static rocks.sakira.sakurarosea.Constants.MOD_ID;
@@ -60,6 +62,11 @@ public class SakuraRosea {
         Biomes.registerSpawn();
         Biomes.registerTypes();
         Biomes.registerEntries();
+
+        ((FlowerPotBlock) net.minecraft.block.Blocks.FLOWER_POT.getBlock()).addPlant(
+                Objects.requireNonNull(Blocks.SAKURA_SAPLING_BLOCK.get().getRegistryName()),
+                Blocks.POTTED_SAKURA_SAPLING_BLOCK
+        );
 
         // This allows our signs to render correctly.
         Field f = ObfuscationReflectionHelper.findField(TileEntityType.class, "field_223046_I");
