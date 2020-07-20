@@ -361,11 +361,13 @@ public class Blocks {
             )
     );
 
-    public static final RegistryObject<Block> CHERRY_PIE_BLOCK = REGISTER.register(
-            "cherry_pie",
-
-            () -> new CherryPieBlock(
-                    Block.Properties.from(net.minecraft.block.Blocks.CAKE)
-            )
-    );
+// TODO: Cherry pie textures
+//
+//    public static final RegistryObject<Block> CHERRY_PIE_BLOCK = REGISTER.register(
+//            "cherry_pie",
+//
+//            () -> new CherryPieBlock(
+//                    Block.Properties.from(net.minecraft.block.Blocks.CAKE)
+//            )
+//    );
 }
