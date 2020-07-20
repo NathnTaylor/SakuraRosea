@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CCC",
+    "BSE",
+    "WWW"
+  ],
+  "key": {
+    "C": {
+      "item": "sakurarosea:cherry"
+    },
+    "B": {
+      "item": "minecraft:milk_bucket"
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    },
+    "E": {
+      "item": "minecraft:egg"
+    },
+    "W": {
+      "item": "minecraft:wheat"
+    }
+  },
+
+  "result": {
+    "item": "sakurarosea:cherry_pie"
+  }
+}
