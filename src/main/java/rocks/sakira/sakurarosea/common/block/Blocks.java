@@ -7,6 +7,7 @@ import net.minecraft.util.Direction;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import rocks.sakira.sakurarosea.common.block.trees.CherryPieBlock;
 import rocks.sakira.sakurarosea.common.block.trees.SakuraTree;
 import rocks.sakira.sakurarosea.common.tileentities.TileEntities;
 import rocks.sakira.sakurarosea.common.wood.FaeWoodType;
@@ -139,6 +140,16 @@ public class Blocks {
                             .hardnessAndResistance(0F)
                             .sound(SoundType.PLANT)
                             .tickRandomly()
+            )
+    );
+
+    public static final RegistryObject<Block> POTTED_SAKURA_SAPLING_BLOCK = REGISTER.register(
+            "potted_sakura_sapling",
+
+            () -> new FlowerPotBlock(
+                    () -> ((FlowerPotBlock) net.minecraft.block.Blocks.FLOWER_POT.getBlock()).getEmptyPot(),
+                    SAKURA_SAPLING_BLOCK,
+                    Block.Properties.from(net.minecraft.block.Blocks.POTTED_OAK_SAPLING)
             )
     );
 
@@ -364,4 +375,14 @@ public class Blocks {
                             .sound(SoundType.PLANT)
             )
     );
+
+// TODO: Cherry pie textures
+//
+//    public static final RegistryObject<Block> CHERRY_PIE_BLOCK = REGISTER.register(
+//            "cherry_pie",
+//
+//            () -> new CherryPieBlock(
+//                    Block.Properties.from(net.minecraft.block.Blocks.CAKE)
+//            )
+//    );
 }

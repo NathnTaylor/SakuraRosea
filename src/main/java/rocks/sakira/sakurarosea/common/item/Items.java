@@ -392,6 +392,17 @@ public class Items {
             )
     );
 
+// TODO: Cherry pie textures
+//
+//    private static final RegistryObject<Item> CHERRY_PIE_ITEM = REGISTER.register(
+//            "cherry_pie",
+//
+//            () -> new BlockItem(
+//                    Blocks.CHERRY_PIE_BLOCK.get(),
+//                    new Item.Properties().group(GROUP)
+//            )
+//    );
+
     private static Item.Properties getPropsForShield() {
         Item.Properties props = new Item.Properties().
                 maxDamage(336)

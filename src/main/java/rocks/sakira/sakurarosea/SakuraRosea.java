@@ -2,6 +2,7 @@ package rocks.sakira.sakurarosea;
 
 import com.google.common.collect.ImmutableSet;
 import net.minecraft.block.Block;
+import net.minecraft.block.FlowerPotBlock;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.gen.layer.BiomeLayer;
@@ -32,6 +33,7 @@ import rocks.sakira.sakurarosea.common.world.biome.Biomes;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Set;
 
 import static rocks.sakira.sakurarosea.Constants.MOD_ID;
@@ -66,6 +68,11 @@ public class SakuraRosea {
 
         setupBiomes();
         setupSigns();
+
+        ((FlowerPotBlock) net.minecraft.block.Blocks.FLOWER_POT.getBlock()).addPlant(
+                Objects.requireNonNull(Blocks.SAKURA_SAPLING_BLOCK.get().getRegistryName()),
+                Blocks.POTTED_SAKURA_SAPLING_BLOCK
+        );
     }
 
     private void setupSigns() throws IllegalAccessException, NoSuchFieldException {
