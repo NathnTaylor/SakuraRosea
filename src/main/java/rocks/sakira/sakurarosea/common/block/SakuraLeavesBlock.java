@@ -11,7 +11,7 @@ import rocks.sakira.sakurarosea.common.particle.Particles;
 import java.util.Random;
 
 public class SakuraLeavesBlock extends LeavesBlock {
-    private int leafColour;
+    private final int leafColour;
 
     public SakuraLeavesBlock(int leafColour, Properties properties) {
         super(properties);
@@ -28,7 +28,7 @@ public class SakuraLeavesBlock extends LeavesBlock {
             BlockPos lowerPos = pos.down();
 
             if (world.isAirBlock(lowerPos)) {
-                double r = (leafColour >> 16 & 255) / 255.0F;;
+                double r = (leafColour >> 16 & 255) / 255.0F;
                 double g = (leafColour >> 8 & 255) / 255.0F;
                 double b = (leafColour & 255) / 255.0F;
 

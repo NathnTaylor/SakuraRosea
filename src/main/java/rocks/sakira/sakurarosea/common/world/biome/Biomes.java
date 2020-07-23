@@ -13,8 +13,6 @@ import rocks.sakira.sakurarosea.Config;
 import static rocks.sakira.sakurarosea.Constants.MOD_ID;
 
 public class Biomes {
-    private static final Logger LOGGER = LogManager.getLogger("SakuraRosea/Biomes");
-
     public static final DeferredRegister<Biome> REGISTER = DeferredRegister.create(ForgeRegistries.BIOMES, MOD_ID);
 
     public static final RegistryObject<Biome> SAKURA_FOREST_HILLS_BIOME = REGISTER.register(
@@ -22,12 +20,12 @@ public class Biomes {
 
             SakuraForestHillsBiome::new
     );
-
     public static final RegistryObject<Biome> SAKURA_FOREST_BIOME = REGISTER.register(
             "sakura_forest",
 
             SakuraForestBiome::new
     );
+    private static final Logger LOGGER = LogManager.getLogger("SakuraRosea/Biomes");
 
     public static void addFeatures() {
         ModBiomeFeatures.addSakuraFeatures(SAKURA_FOREST_HILLS_BIOME.get());
