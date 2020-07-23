@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "sakurarosea:sakura_log",
+    "sakurarosea:sakura_wood",
+    "sakurarosea:stripped_sakura_log",
     "sakurarosea:stripped_sakura_log"
   ]
 }
