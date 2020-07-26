@@ -6,6 +6,15 @@
       "entries": [
         {
           "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "sakurarosea:pink_clay_door",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ],
           "name": "sakurarosea:pink_clay_door"
         }
       ],
