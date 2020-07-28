@@ -23,6 +23,7 @@ public class Blocks {
             () -> new SakuraDoor(
                     Block.Properties.create(Material.WOOD, MaterialColor.MAGENTA)
                             .hardnessAndResistance(3.0F)
+                            .notSolid()
             )
     );
 
@@ -32,6 +33,7 @@ public class Blocks {
             () -> new SakuraDoor(
                     Block.Properties.create(Material.ROCK, MaterialColor.WHITE_TERRACOTTA)
                             .hardnessAndResistance(3.0F)
+                            .notSolid()
             )
     );
 
@@ -41,6 +43,7 @@ public class Blocks {
             () -> new SakuraDoor(
                     Block.Properties.create(Material.ROCK, MaterialColor.MAGENTA)
                             .hardnessAndResistance(3.0F)
+                            .notSolid()
             )
     );
 
@@ -50,6 +53,7 @@ public class Blocks {
             () -> new SakuraTrapDoor(
                     Block.Properties.create(Material.WOOD, MaterialColor.MAGENTA)
                             .hardnessAndResistance(3.0F)
+                            .notSolid()
             )
     );
 
