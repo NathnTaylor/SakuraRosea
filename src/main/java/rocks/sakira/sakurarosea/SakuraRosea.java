@@ -46,8 +46,6 @@ public class SakuraRosea {
         final IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         eventBus.register(this);
-        eventBus.register(BlockClickedEventHandler.class);
-        eventBus.register(Particles.class);
 
         Biomes.REGISTER.register(eventBus);
         Blocks.REGISTER.register(eventBus);
