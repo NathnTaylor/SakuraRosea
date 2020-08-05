@@ -64,7 +64,6 @@ public class SakuraRosea {
         Biomes.registerTypes();
         Biomes.registerEntries();
 
-        setupBiomes();
         setupSigns();
 
         ((FlowerPotBlock) net.minecraft.block.Blocks.FLOWER_POT.getBlock()).addPlant(
@@ -96,41 +95,6 @@ public class SakuraRosea {
             // If this fails, signs won't work - it's better to crash the game than allow it
             // to run with broken blocks or tile entities.
             LOGGER.error("Failed to set up allowable sign block types", e);
-            throw e;
-        }
-    }
-
-    private void setupBiomes() throws NoSuchFieldException, IllegalAccessException {
-        // Forge hasn't yet implemented overworld biome registration, so we do it ourselves.
-        Field f = ObfuscationReflectionHelper.findField(BiomeLayer.class, "field_202745_s");
-
-        try {
-            Field modifiers = Field.class.getDeclaredField("modifiers");
-
-            modifiers.setAccessible(true);
-            modifiers.setInt(f, f.getModifiers() & ~Modifier.FINAL);  // Bypass `final` modifier.
-
-            // Get the current array of biome IDs.
-            int[] givenBiomeIds = (int[]) f.get(BiomeLayer.class);
-
-            // Create a new array with our IDs.
-            int[] biomeIDs = new int[givenBiomeIds.length + 1];
-
-            // Add all the current IDs to the new array.
-            for (int i = 0; i < givenBiomeIds.length; i += 1) {
-                biomeIDs[i] = givenBiomeIds[i];
-            }
-
-            // Add our biomes to the array.
-            biomeIDs[givenBiomeIds.length] = Registry.BIOME.getId(Biomes.SAKURA_FOREST_BIOME.get());
-
-            // Finally, update the reference within the BiomeLayer class to the array we just made.
-            f.set(BiomeLayer.class, biomeIDs);
-        } catch (IllegalAccessException e) {
-            // If it didn't work, we should log the problem and then re-throw the exception.
-            // If this fails, biomes won't generate - it's better to crash the game than allow it
-            // to run with broken or inconsistent world generation.
-            LOGGER.error("Failed to set up our custom biomes", e);
             throw e;
         }
     }
