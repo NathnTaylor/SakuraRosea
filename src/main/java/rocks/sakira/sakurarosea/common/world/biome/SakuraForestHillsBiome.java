@@ -61,7 +61,11 @@ public final class SakuraForestHillsBiome extends Biome {
 
     @OnlyIn(Dist.CLIENT)
     public int getGrassColor(double posX, double posZ) {
-        return 0x74CF40;
+        return 0x77BD4F;
     }
 
+    @OnlyIn(Dist.CLIENT)
+    public int getFoliageColor() {
+        return 0xFF97C9;
+    }
 }
