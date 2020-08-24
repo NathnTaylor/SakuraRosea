@@ -1,0 +1,66 @@
+{
+  "_credit": "Translations provided by Manimanocas",
+
+  "itemGroup.sakurarosea": "Sakura Rosea",
+
+  "biome.sakurarosea.sakura_forest": "Floresta de Sakura",
+  "biome.sakurarosea.sakura_forest_hills": "Colinas da Floresta de Sakura",
+
+  "block.sakurarosea.sakura_sapling": "Rebento de Árvore de Sakura",
+  "block.sakurarosea.sakura_log": "Toro de Sakura",
+  "block.sakurarosea.stripped_sakura_log": "Toro de Sakura Descascado",
+
+  "block.sakurarosea.sakura_wood": "Madeira de Sakura",
+  "block.sakurarosea.stripped_sakura_wood": "Madeira de Sakura Descascada",
+
+  "block.sakurarosea.white_sakura_leaves": "Flores Brancas de Sakura",
+  "block.sakurarosea.sakura_leaves": "Flores Pálidas de Sakura",
+  "block.sakurarosea.alt_sakura_leaves": "Flores Rosa de Sakura",
+  "item.sakurarosea.cherry": "Cerejas",
+  "item.sakurarosea.sakura_blossom": "Pétalas de Cereja",
+  "item.sakurarosea.sakura_tea": "Chá de Cereja",
+
+  "block.sakurarosea.sakura_planks": "Tábuas de Sakura",
+  "block.sakurarosea.sakura_slab": "Degrau de Sakura",
+  "block.sakurarosea.sakura_stairs": "Escadas de Sakura",
+
+  "block.sakurarosea.sakura_pressure_plate": "Placa de Pressão de Sakura",
+  "block.sakurarosea.sakura_button": "Botão de Sakura",
+  "block.sakurarosea.sakura_door": "Porta de Sakura",
+  "block.sakurarosea.sakura_trapdoor": "Alçapão de Sakura",
+
+  "block.sakurarosea.sakura_fence": "Cerca de Sakura",
+  "block.sakurarosea.sakura_fence_gate": "Portão de Sakura",
+
+  "block.sakurarosea.sakura_barrel": "Barril de Sakura",
+  "container.sakurarosea.sakura_barrel": "Barril de Sakura",
+  "block.sakurarosea.sakura_chest": "Báu de Sakura",
+  "container.sakurarosea.sakura_chest": "Báu de Sakura",
+  "container.sakurarosea.sakura_double_chest": "Báu Grande de Sakura",
+
+  "block.sakurarosea.sakura_sign": "Tabuleta de Sakura",
+  "item.sakurarosea.sakura_boat": "Barco de Sakura",
+  "item.sakurarosea.sakura_shield": "Escudo de Sakura",
+
+  "item.sakurarosea.white_clay": "Argila Branca",
+  "item.sakurarosea.white_brick": "Tijolo Branco",
+  "block.sakurarosea.white_bricks": "Tijolos Brancos",
+  "block.sakurarosea.white_clay_door": "Porta de Argila Branca",
+  "block.sakurarosea.white_bricks_slab": "Degrau de Tijolos Brancos",
+  "block.sakurarosea.white_bricks_stairs": "Escadas de Tijolos Brancos",
+  "block.sakurarosea.white_bricks_wall": "Muro de Tijolos Brancos",
+
+  "item.sakurarosea.pink_clay": "Argila Rosa",
+  "item.sakurarosea.pink_brick": "Tijolo Rosa",
+  "block.sakurarosea.pink_bricks": "Tijolos Rosas",
+  "block.sakurarosea.pink_clay_door": "Porta de Argila Rosa",
+  "block.sakurarosea.pink_bricks_slab": "Degrau de Tijolos Rosas",
+  "block.sakurarosea.pink_bricks_stairs": "Escadas de Tijolos Rosas",
+  "block.sakurarosea.pink_bricks_wall": "Muro de Tijolos Rosas",
+
+  "block.sakurarosea.sakura_leaf_carpet": "Tapete de Folhas de Sakura Pálidas",
+  "block.sakurarosea.alt_sakura_leaf_carpet": "Tapete de Folhas de Sakura Rosas",
+  "block.sakurarosea.white_sakura_leaf_carpet": "Tapete de Folhas de Sakura Brancas",
+
+  "block.sakurarosea.cherry_pie": "Torta de Cereja"
+}
