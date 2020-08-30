@@ -1,0 +1,66 @@
+{
+  "_credit": "Translations provided by leocth",
+
+  "itemGroup.sakurarosea": "Sakura Rosea",
+
+  "biome.sakurarosea.sakura_forest": "樱花树林",
+  "biome.sakurarosea.sakura_forest_hills": "樱花树林丘陵",
+
+  "block.sakurarosea.sakura_sapling": "樱树苗",
+  "block.sakurarosea.sakura_log": "樱木原木",
+  "block.sakurarosea.stripped_sakura_log": "去皮樱木原木",
+
+  "block.sakurarosea.sakura_wood": "樱木",
+  "block.sakurarosea.stripped_sakura_wood": "去皮樱木",
+
+  "block.sakurarosea.white_sakura_leaves": "白樱花",
+  "block.sakurarosea.sakura_leaves": "淡樱花",
+  "block.sakurarosea.alt_sakura_leaves": "粉樱花",
+  "item.sakurarosea.cherry": "樱桃",
+  "item.sakurarosea.sakura_blossom": "樱花瓣",
+  "item.sakurarosea.sakura_tea": "樱花茶",
+
+  "block.sakurarosea.sakura_planks": "樱木木板",
+  "block.sakurarosea.sakura_slab": "樱木台阶",
+  "block.sakurarosea.sakura_stairs": "樱木楼梯",
+
+  "block.sakurarosea.sakura_pressure_plate": "樱木压力板",
+  "block.sakurarosea.sakura_button": "樱木按钮",
+  "block.sakurarosea.sakura_door": "樱木门",
+  "block.sakurarosea.sakura_trapdoor": "樱木活板门",
+
+  "block.sakurarosea.sakura_fence": "樱木栅栏",
+  "block.sakurarosea.sakura_fence_gate": "樱木栅栏门",
+
+  "block.sakurarosea.sakura_barrel": "樱木桶",
+  "container.sakurarosea.sakura_barrel": "樱木桶",
+  "block.sakurarosea.sakura_chest": "樱木箱子",
+  "container.sakurarosea.sakura_chest": "樱木箱子",
+  "container.sakurarosea.sakura_double_chest": "大型樱木箱子",
+
+  "block.sakurarosea.sakura_sign": "樱木告示牌",
+  "item.sakurarosea.sakura_boat": "樱木船",
+  "item.sakurarosea.sakura_shield": "樱木盾",
+
+  "item.sakurarosea.white_clay": "白粘土",
+  "item.sakurarosea.white_brick": "白砖",
+  "block.sakurarosea.white_bricks": "白砖块",
+  "block.sakurarosea.white_clay_door": "白粘土门",
+  "block.sakurarosea.white_bricks_slab": "白砖台阶",
+  "block.sakurarosea.white_bricks_stairs": "白砖阶梯",
+  "block.sakurarosea.white_bricks_wall": "白砖墙",
+
+  "item.sakurarosea.pink_clay": "粉粘土",
+  "item.sakurarosea.pink_brick": "粉砖",
+  "block.sakurarosea.pink_bricks": "粉砖块",
+  "block.sakurarosea.pink_clay_door": "粉粘土门",
+  "block.sakurarosea.pink_bricks_slab": "粉砖台阶",
+  "block.sakurarosea.pink_bricks_stairs": "粉砖阶梯",
+  "block.sakurarosea.pink_bricks_wall": "粉砖墙",
+
+  "block.sakurarosea.sakura_leaf_carpet": "淡樱花",
+  "block.sakurarosea.alt_sakura_leaf_carpet": "粉樱花",
+  "block.sakurarosea.white_sakura_leaf_carpet": "白樱花",
+
+  "block.sakurarosea.cherry_pie": "樱桃派"
+}
