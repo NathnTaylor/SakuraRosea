@@ -1,0 +1,66 @@
+{
+  "_credit": "Translations provided by 盧建彬",
+
+  "itemGroup.sakurarosea": "Sakura Rosea",
+
+  "biome.sakurarosea.sakura_forest": "櫻花森林",
+  "biome.sakurarosea.sakura_forest_hills": "櫻花山丘",
+
+  "block.sakurarosea.sakura_sapling": "櫻花樹苗",
+  "block.sakurarosea.sakura_log": "櫻花原木",
+  "block.sakurarosea.stripped_sakura_log": "剝皮櫻花原木",
+
+  "block.sakurarosea.sakura_wood": "櫻花木塊",
+  "block.sakurarosea.stripped_sakura_wood": "剝皮櫻花木塊",
+
+  "block.sakurarosea.white_sakura_leaves": "白色櫻花樹葉",
+  "block.sakurarosea.sakura_leaves": "淺粉色櫻花樹葉",
+  "block.sakurarosea.alt_sakura_leaves": "粉色櫻花樹葉",
+  "item.sakurarosea.cherry": "櫻桃",
+  "item.sakurarosea.sakura_blossom": "櫻花花瓣",
+  "item.sakurarosea.sakura_tea": "櫻花花茶",
+
+  "block.sakurarosea.sakura_planks": "櫻花木材",
+  "block.sakurarosea.sakura_slab": "櫻花半磚",
+  "block.sakurarosea.sakura_stairs": "櫻花樓梯",
+
+  "block.sakurarosea.sakura_pressure_plate": "櫻花木壓力板",
+  "block.sakurarosea.sakura_button": "櫻花木按鈕",
+  "block.sakurarosea.sakura_door": "櫻花木門",
+  "block.sakurarosea.sakura_trapdoor": "櫻花木地板門",
+
+  "block.sakurarosea.sakura_fence": "櫻花木柵欄",
+  "block.sakurarosea.sakura_fence_gate": "櫻花木柵欄門",
+
+  "block.sakurarosea.sakura_barrel": "櫻花木木桶",
+  "container.sakurarosea.sakura_barrel": "櫻花木木桶",
+  "block.sakurarosea.sakura_chest": "櫻花儲物箱",
+  "container.sakurarosea.sakura_chest": "櫻花儲物箱",
+  "container.sakurarosea.sakura_double_chest": "大型櫻花儲物箱",
+
+  "block.sakurarosea.sakura_sign": "櫻花木告示牌",
+  "item.sakurarosea.sakura_boat": "櫻花木木船",
+  "item.sakurarosea.sakura_shield": "櫻花木盾",
+
+  "item.sakurarosea.white_clay": "白色黏土",
+  "item.sakurarosea.white_brick": "白色磚頭",
+  "block.sakurarosea.white_bricks": "白磚",
+  "block.sakurarosea.white_clay_door": "白色磚門",
+  "block.sakurarosea.white_bricks_slab": "白磚半磚",
+  "block.sakurarosea.white_bricks_stairs": "白磚樓梯",
+  "block.sakurarosea.white_bricks_wall": "白磚牆",
+
+  "item.sakurarosea.pink_clay": "粉色黏土",
+  "item.sakurarosea.pink_brick": "粉色磚頭",
+  "block.sakurarosea.pink_bricks": "粉磚",
+  "block.sakurarosea.pink_clay_door": "粉色磚門",
+  "block.sakurarosea.pink_bricks_slab": "粉磚半磚",
+  "block.sakurarosea.pink_bricks_stairs": "粉磚樓梯",
+  "block.sakurarosea.pink_bricks_wall": "粉磚牆",
+
+  "block.sakurarosea.sakura_leaf_carpet": "淺粉色樹葉地毯",
+  "block.sakurarosea.alt_sakura_leaf_carpet": "粉色樹葉地毯",
+  "block.sakurarosea.white_sakura_leaf_carpet": "白色樹葉地毯",
+
+  "block.sakurarosea.cherry_pie": "櫻桃派"
+}
