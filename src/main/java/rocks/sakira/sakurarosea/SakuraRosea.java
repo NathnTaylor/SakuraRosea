@@ -2,6 +2,7 @@ package rocks.sakira.sakurarosea;
 
 import com.google.common.collect.ImmutableSet;
 import net.minecraft.block.Block;
+import net.minecraft.block.ComposterBlock;
 import net.minecraft.block.FlowerPotBlock;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.api.distmarker.Dist;
@@ -60,6 +61,13 @@ public class SakuraRosea {
         Biomes.registerSpawn();
         Biomes.registerTypes();
         Biomes.registerEntries();
+
+        ComposterBlock.CHANCES.put(Items.SAKURA_BLOSSOM_ITEM::get, 0.3F);
+        ComposterBlock.CHANCES.put(Items.SAKURA_SAPLING_BLOCK_ITEM::get, 0.3F);
+
+        ComposterBlock.CHANCES.put(Items.ALT_SAKURA_LEAVES_BLOCK_ITEM::get, 0.3F);
+        ComposterBlock.CHANCES.put(Items.SAKURA_LEAVES_BLOCK_ITEM::get, 0.3F);
+        ComposterBlock.CHANCES.put(Items.WHITE_SAKURA_LEAVES_BLOCK_ITEM::get, 0.3F);
 
         ((FlowerPotBlock) net.minecraft.block.Blocks.FLOWER_POT.getBlock()).addPlant(
                 Objects.requireNonNull(Blocks.SAKURA_SAPLING_BLOCK.get().getRegistryName()),
