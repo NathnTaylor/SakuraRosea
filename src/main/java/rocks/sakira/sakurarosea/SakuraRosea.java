@@ -62,12 +62,12 @@ public class SakuraRosea {
         Biomes.registerTypes();
         Biomes.registerEntries();
 
-        ComposterBlock.CHANCES.put(Items.SAKURA_BLOSSOM_ITEM::get, 0.3F);
-        ComposterBlock.CHANCES.put(Items.SAKURA_SAPLING_BLOCK_ITEM::get, 0.3F);
+        ComposterBlock.CHANCES.put(Items.SAKURA_BLOSSOM_ITEM.get().asItem(), 0.3F);
+        ComposterBlock.CHANCES.put(Items.SAKURA_SAPLING_BLOCK_ITEM.get().asItem(), 0.3F);
 
-        ComposterBlock.CHANCES.put(Items.ALT_SAKURA_LEAVES_BLOCK_ITEM::get, 0.3F);
-        ComposterBlock.CHANCES.put(Items.SAKURA_LEAVES_BLOCK_ITEM::get, 0.3F);
-        ComposterBlock.CHANCES.put(Items.WHITE_SAKURA_LEAVES_BLOCK_ITEM::get, 0.3F);
+        ComposterBlock.CHANCES.put(Items.ALT_SAKURA_LEAVES_BLOCK_ITEM.get().asItem(), 0.3F);
+        ComposterBlock.CHANCES.put(Items.SAKURA_LEAVES_BLOCK_ITEM.get().asItem(), 0.3F);
+        ComposterBlock.CHANCES.put(Items.WHITE_SAKURA_LEAVES_BLOCK_ITEM.get().asItem(), 0.3F);
 
         ((FlowerPotBlock) net.minecraft.block.Blocks.FLOWER_POT.getBlock()).addPlant(
                 Objects.requireNonNull(Blocks.SAKURA_SAPLING_BLOCK.get().getRegistryName()),
