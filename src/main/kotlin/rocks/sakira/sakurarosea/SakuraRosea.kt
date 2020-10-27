@@ -16,7 +16,6 @@ import rocks.sakira.sakurarosea.entity.renderer.SakuraBoatEntityRenderer
 import rocks.sakira.sakurarosea.item.render.SakuraChestItemRenderer
 import rocks.sakira.sakurarosea.mixin.common.AxeItemAccessor
 import rocks.sakira.sakurarosea.mixin.common.ComposterBlockMixin
-import rocks.sakira.sakurarosea.mixin.common.FlowerPotBlockMixin
 import rocks.sakira.sakurarosea.networking.packets.CustomEntitySpawnS2CPacket
 import rocks.sakira.sakurarosea.register.*
 
@@ -30,7 +29,6 @@ fun init() {
     Entities.register()
 
     registerCompostableItems()
-    registerFlowerPots()
     registerSignTypes()
     registerStrippedLogs()
 }
@@ -53,15 +51,6 @@ fun registerCompostableItems() {
     ComposterBlockMixin.registerCompostableItem(0.3F, Items.SAKURA_LEAVES)
     ComposterBlockMixin.registerCompostableItem(0.3F, Items.SAKURA_LEAVES_ALT)
     ComposterBlockMixin.registerCompostableItem(0.3F, Items.SAKURA_LEAVES_WHITE)
-}
-
-fun registerFlowerPots() {
-    val block = net.minecraft.block.Blocks.FLOWER_POT as FlowerPotBlockMixin
-    val pots = block.pots.toMutableMap()
-
-    pots[Blocks.SAKURA_SAPLING] = Blocks.POTTED_SAKURA_SAPLING
-
-    block.pots = pots
 }
 
 fun registerStrippedLogs() {
