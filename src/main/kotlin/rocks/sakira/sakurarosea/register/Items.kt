@@ -30,6 +30,8 @@ object Items {
     val SAKURA_BUTTON = createBlockItem(Blocks.SAKURA_BUTTON)
     val SAKURA_PRESSURE_PLATE = createBlockItem(Blocks.SAKURA_PRESSURE_PLATE)
 
+    val SAKURA_CRAFTING_TABLE = createBlockItem(Blocks.SAKURA_CRAFTING_TABLE)
+
     val SAKURA_LEAVES = createBlockItem(Blocks.SAKURA_LEAVES)
     val SAKURA_LEAVES_ALT = createBlockItem(Blocks.SAKURA_LEAVES_ALT)
     val SAKURA_LEAVES_WHITE = createBlockItem(Blocks.SAKURA_LEAVES_WHITE)
@@ -96,6 +98,8 @@ object Items {
 
         register(SAKURA_BUTTON, "sakura_button")
         register(SAKURA_PRESSURE_PLATE, "sakura_pressure_plate")
+
+        register(SAKURA_CRAFTING_TABLE, "sakura_crafting_table")
 
         register(SAKURA_LEAVES, "sakura_leaves")
         register(SAKURA_LEAVES_ALT, "alt_sakura_leaves")

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "sakurarosea:blocks/sakura_crafting_table_front",
+    "north": "sakurarosea:blocks/sakura_crafting_table_front",
+    "south": "sakurarosea:blocks/sakura_crafting_table_side",
+    "east": "sakurarosea:blocks/sakura_crafting_table_side",
+    "west": "sakurarosea:blocks/sakura_crafting_table_front",
+    "up": "sakurarosea:blocks/sakura_crafting_table_top",
+    "down": "sakurarosea:blocks/sakura_planks"
+  }
+}

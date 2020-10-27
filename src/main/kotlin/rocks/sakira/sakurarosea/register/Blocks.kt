@@ -26,6 +26,8 @@ object Blocks {
         MaterialColor.MAGENTA
     )
 
+    val SAKURA_CRAFTING_TABLE  = createCraftingTable(Material.WOOD, MaterialColor.MAGENTA)
+
     val SAKURA_LEAVES = createLeaves(0xFFEDF1)
     val SAKURA_LEAVES_ALT = createLeaves(0xFFD4E2)
     val SAKURA_LEAVES_WHITE = createLeaves(0xFFFFFF)
@@ -98,6 +100,8 @@ object Blocks {
 
         register(SAKURA_BUTTON, "sakura_button")
         register(SAKURA_PRESSURE_PLATE, "sakura_pressure_plate")
+
+        register(SAKURA_CRAFTING_TABLE, "sakura_crafting_table")
 
         register(SAKURA_LEAVES, "sakura_leaves")
         register(SAKURA_LEAVES_ALT, "alt_sakura_leaves")
@@ -226,6 +230,14 @@ object Blocks {
     private fun createChest(block: Block) = SakuraChestBlock(
         FabricBlockSettings.copyOf(block),
         Supplier { BlockEntities.SAKURA_CHEST }
+    )
+
+    private fun createCraftingTable(material: Material, color: MaterialColor) = UtilCraftingTableBlock(
+        FabricBlockSettings.of(material, color)
+            .strength(2.5F)
+            .nonOpaque()
+            .breakByTool(FabricToolTags.AXES)
+            .sounds(BlockSoundGroup.WOOD)
     )
 
     private fun createDoor(material: Material, color: MaterialColor, tool: Tag<Item>) = UtilDoorBlock(
