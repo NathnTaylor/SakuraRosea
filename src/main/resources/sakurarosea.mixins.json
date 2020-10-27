@@ -6,6 +6,7 @@
     "common.AxeItemAccessor",
     "common.BlocksMixin",
     "common.BuiltinBiomesAccessor",
+    "common.ComposterBlockMixin",
     "common.FlowerPotBlockMixin",
     "common.SetBaseBiomesLayerMixin",
     "common.SignTypeMixin",
