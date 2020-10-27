@@ -7,23 +7,20 @@ bin
 .project
 
 # idea
-out
+.idea/
+*.iml
 *.ipr
 *.iws
-*.iml
-.idea
 
 # gradle
-build
-.gradle
+.gradle/
+build/
+out/
 
 # other
 eclipse
 run
 
-# Files from Forge MDK
-forge*changelog.txt
-
-.idea/workspace.xml
-.idea/misc.xml
-.floo
+# fabric
+run/
+minecraft/

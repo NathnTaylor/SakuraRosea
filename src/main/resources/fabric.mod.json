@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "id": "sakurarosea",
+  "version": "${version}",
+
+  "name": "Sakura Rosea",
+  "description": "Sakura biome generation (and a few more things)",
+
+  "authors": [
+    "sakiraart",
+    "gdude2002"
+  ],
+
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+  "license": "All Rights Reserved",
+  "icon": "assets/sakurarosea/icon.png",
+
+  "environment": "*",
+
+  "entrypoints": {
+    "main": [
+      "rocks.sakira.sakurarosea.SakuraRoseaKt::init"
+    ],
+    "client": [
+      "rocks.sakira.sakurarosea.SakuraRoseaKt::clientInit"
+    ]
+  },
+
+  "mixins": [
+    "sakurarosea.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.9.2",
+    "fabric": "*",
+    "fabric-language-kotlin": "*",
+    "minecraft": ">=1.16.2"
+  },
+
+  "suggests": {
+    "sakurarosea": "*"
+  }
+}

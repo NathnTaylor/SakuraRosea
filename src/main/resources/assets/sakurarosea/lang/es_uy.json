@@ -2,6 +2,7 @@
   "_comment": "This file is based on es_ar.json and should be updated with it",
 
   "itemGroup.sakurarosea": "Sakura Rosea",
+  "itemGroup.sakurarosea.sakurarosea": "Sakura Rosea",
 
   "biome.sakurarosea.sakura_forest": "Bosque de sakura",
   "biome.sakurarosea.sakura_forest_hills": "Bosque montañoso de sakura",

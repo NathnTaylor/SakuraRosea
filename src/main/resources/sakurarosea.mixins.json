@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "package": "rocks.sakira.sakurarosea.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "common.AxeItemAccessor",
+    "common.BlocksMixin",
+    "common.BuiltinBiomesAccessor",
+    "common.FlowerPotBlockMixin",
+    "common.SetBaseBiomesLayerMixin",
+    "common.SignTypeMixin",
+    "common.VanillaLayeredBiomeSourceMixin"
+  ],
+  "client": [
+    "client.SignBlockEntityRendererMixin",
+    "client.TexturedRenderLayersMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
