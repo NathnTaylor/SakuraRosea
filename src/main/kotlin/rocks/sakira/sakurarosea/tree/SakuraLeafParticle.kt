@@ -8,13 +8,20 @@ import net.minecraft.particle.DefaultParticleType
 import kotlin.math.max
 import kotlin.math.min
 
-class SakuraLeafParticle(clientWorld: ClientWorld?, x: Double, y: Double, z: Double, velocityX: Double, velocityY: Double, velocityZ: Double) :
-    SpriteBillboardParticle(clientWorld, x, y, z, velocityX, velocityY, velocityZ) {
+class SakuraLeafParticle(
+    clientWorld: ClientWorld?,
+    x: Double,
+    y: Double,
+    z: Double,
+    velocityX: Double,
+    velocityY: Double,
+    velocityZ: Double
+) : SpriteBillboardParticle(clientWorld, x, y, z, velocityX, velocityY, velocityZ) {
 
     init {
         scale *= 1.2F
 
-        val num = (32.0 / (Math.random() * 0.8 + 0.2))
+        val num = (128.0 / (Math.random() * 0.8 + 0.2))
 
         this.maxAge = (num * 3.8).coerceAtLeast(6.0).toInt()
         this.angle = (Math.random() * (Math.PI * 2)).toFloat()
