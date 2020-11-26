@@ -18,6 +18,7 @@ import rocks.sakira.sakurarosea.mixin.common.AxeItemAccessor
 import rocks.sakira.sakurarosea.mixin.common.ComposterBlockMixin
 import rocks.sakira.sakurarosea.networking.packets.CustomEntitySpawnS2CPacket
 import rocks.sakira.sakurarosea.register.*
+import rocks.sakira.sakurarosea.tree.SakuraSaplingGenerator
 
 const val MOD_ID = "sakurarosea"
 
@@ -31,6 +32,8 @@ fun init() {
     registerCompostableItems()
     registerSignTypes()
     registerStrippedLogs()
+
+    SakuraSaplingGenerator.register()
 }
 
 fun clientInit() {
