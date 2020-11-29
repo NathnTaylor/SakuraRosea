@@ -144,6 +144,7 @@ object Biomes {
             Feature.TREE
                 .configure(SakuraSaplingGenerator.ALT_SAKURA_TREE_CONFIG)
                 .decorate(ConfiguredFeatures.Decorators.HEIGHTMAP_WORLD_SURFACE.spreadHorizontally())
+                .repeatRandomly(6)
         )
 
         generationSettings.feature(
@@ -152,6 +153,7 @@ object Biomes {
             Feature.TREE
                 .configure(SakuraSaplingGenerator.SAKURA_TREE_CONFIG)
                 .decorate(ConfiguredFeatures.Decorators.HEIGHTMAP_WORLD_SURFACE.spreadHorizontally())
+                .repeatRandomly(6)
         )
 
         generationSettings.feature(
@@ -160,6 +162,7 @@ object Biomes {
             Feature.TREE
                 .configure(SakuraSaplingGenerator.WHITE_SAKURA_TREE_CONFIG)
                 .decorate(ConfiguredFeatures.Decorators.HEIGHTMAP_WORLD_SURFACE.spreadHorizontally())
+                .repeatRandomly(6)
         )
 
         generationSettings.feature(

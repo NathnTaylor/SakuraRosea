@@ -1,5 +1,6 @@
 package rocks.sakira.sakurarosea.tree
 
+import net.minecraft.block.BlockState
 import net.minecraft.block.sapling.SaplingGenerator
 import net.minecraft.util.Identifier
 import net.minecraft.util.registry.BuiltinRegistries
@@ -8,9 +9,12 @@ import net.minecraft.world.gen.UniformIntDistribution
 import net.minecraft.world.gen.feature.ConfiguredFeature
 import net.minecraft.world.gen.feature.Feature
 import net.minecraft.world.gen.feature.TreeFeatureConfig
+import net.minecraft.world.gen.feature.size.ThreeLayersFeatureSize
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer
+import net.minecraft.world.gen.foliage.LargeOakFoliagePlacer
 import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider
+import net.minecraft.world.gen.trunk.LargeOakTrunkPlacer
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer
 import rocks.sakira.sakurarosea.MOD_ID
 import rocks.sakira.sakurarosea.register.Blocks
@@ -18,41 +22,21 @@ import java.util.*
 
 class SakuraSaplingGenerator : SaplingGenerator() {
     companion object {
-        val SAKURA_TREE_CONFIG: TreeFeatureConfig = TreeFeatureConfig.Builder(
+        private fun createConfig(leaves: BlockState): TreeFeatureConfig = TreeFeatureConfig.Builder(
             SimpleBlockStateProvider(Blocks.SAKURA_LOG.defaultState),
-            SimpleBlockStateProvider(Blocks.SAKURA_LEAVES.defaultState),
-            BlobFoliagePlacer(
+            SimpleBlockStateProvider(leaves),
+            LargeOakFoliagePlacer(
                 UniformIntDistribution.of(3, 0),
-                UniformIntDistribution.of(0, 0),
-                3
+                UniformIntDistribution.of(3, 0),
+                4
             ),
-            StraightTrunkPlacer(3, 3, 5),
-            TwoLayersFeatureSize(2, 1, 2)
+            LargeOakTrunkPlacer(7, 7, 11),
+            ThreeLayersFeatureSize(6, 3, 3, 2, 1, OptionalInt.empty())
         ).build()
 
-        val ALT_SAKURA_TREE_CONFIG: TreeFeatureConfig = TreeFeatureConfig.Builder(
-            SimpleBlockStateProvider(Blocks.SAKURA_LOG.defaultState),
-            SimpleBlockStateProvider(Blocks.SAKURA_LEAVES_ALT.defaultState),
-            BlobFoliagePlacer(
-                UniformIntDistribution.of(3, 0),
-                UniformIntDistribution.of(0, 0),
-                3
-            ),
-            StraightTrunkPlacer(3, 3, 5),
-            TwoLayersFeatureSize(2, 1, 2)
-        ).build()
-
-        val WHITE_SAKURA_TREE_CONFIG: TreeFeatureConfig = TreeFeatureConfig.Builder(
-            SimpleBlockStateProvider(Blocks.SAKURA_LOG.defaultState),
-            SimpleBlockStateProvider(Blocks.SAKURA_LEAVES_WHITE.defaultState),
-            BlobFoliagePlacer(
-                UniformIntDistribution.of(3, 0),
-                UniformIntDistribution.of(0, 0),
-                3
-            ),
-            StraightTrunkPlacer(3, 3, 5),
-            TwoLayersFeatureSize(2, 1, 2)
-        ).build()
+        val SAKURA_TREE_CONFIG: TreeFeatureConfig = createConfig(Blocks.SAKURA_LEAVES.defaultState)
+        val ALT_SAKURA_TREE_CONFIG: TreeFeatureConfig = createConfig(Blocks.SAKURA_LEAVES_ALT.defaultState)
+        val WHITE_SAKURA_TREE_CONFIG: TreeFeatureConfig = createConfig(Blocks.SAKURA_LEAVES_WHITE.defaultState)
 
         val SAKURA_CONFIG = Feature.TREE.configure(SAKURA_TREE_CONFIG)
         val ALT_SAKURA_CONFIG = Feature.TREE.configure(ALT_SAKURA_TREE_CONFIG)
