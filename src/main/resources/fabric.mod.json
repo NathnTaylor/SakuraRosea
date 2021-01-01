@@ -23,10 +23,10 @@
 
   "entrypoints": {
     "main": [
-      "rocks.sakira.sakurarosea.SakuraRoseaKt::init"
+      "io.github.faecraft.sakurarosea.SakuraRoseaKt::init"
     ],
     "client": [
-      "rocks.sakira.sakurarosea.SakuraRoseaKt::clientInit"
+      "io.github.faecraft.sakurarosea.SakuraRoseaKt::clientInit"
     ]
   },
 

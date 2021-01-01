@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "rocks.sakira.sakurarosea.mixin",
+  "package": "io.github.faecraft.sakurarosea.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "common.AxeItemAccessor",
