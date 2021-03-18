@@ -1,20 +1,21 @@
 package io.github.faecraft.sakurarosea.register
 
+import io.github.faecraft.sakurarosea.MOD_ID
+import io.github.faecraft.sakurarosea.block.*
+import io.github.faecraft.sakurarosea.mixin.common.BlocksMixin
+import io.github.faecraft.sakurarosea.tree.SakuraSaplingGenerator
 import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags
 import net.minecraft.block.*
 import net.minecraft.block.Blocks
 import net.minecraft.block.sapling.SaplingGenerator
+import net.minecraft.entity.EntityType
 import net.minecraft.item.Item
 import net.minecraft.sound.BlockSoundGroup
 import net.minecraft.tag.Tag
 import net.minecraft.util.Identifier
 import net.minecraft.util.SignType
 import net.minecraft.util.registry.Registry
-import io.github.faecraft.sakurarosea.MOD_ID
-import io.github.faecraft.sakurarosea.block.*
-import io.github.faecraft.sakurarosea.mixin.common.BlocksMixin
-import io.github.faecraft.sakurarosea.tree.SakuraSaplingGenerator
 import java.util.function.Supplier
 
 object Blocks {
@@ -26,7 +27,7 @@ object Blocks {
         MaterialColor.MAGENTA
     )
 
-    val SAKURA_CRAFTING_TABLE  = createCraftingTable(Material.WOOD, MaterialColor.MAGENTA)
+    val SAKURA_CRAFTING_TABLE = createCraftingTable(Material.WOOD, MaterialColor.MAGENTA)
 
     val SAKURA_LEAVES = createLeaves(0xFFEDF1)
     val SAKURA_LEAVES_ALT = createLeaves(0xFFD4E2)
@@ -262,9 +263,19 @@ object Blocks {
         colour,
 
         FabricBlockSettings.of(Material.LEAVES, MaterialColor.MAGENTA)
-            .strength(0.2F)
             .nonOpaque()
+            .ticksRandomly()
+
+            .breakByTool(FabricToolTags.HOES)
             .sounds(BlockSoundGroup.GRASS)
+            .strength(0.2F)
+
+            .allowsSpawning { state, view, pos, type ->
+                type === EntityType.OCELOT || type === EntityType.PARROT
+            }
+
+            .blockVision { _, _, _ -> false }
+            .suffocates { _, _, _ -> false }
     )
 
     private fun createLogBlock(colour: MaterialColor) = BlocksMixin.createLogBlock(colour, colour)
