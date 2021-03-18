@@ -22,11 +22,13 @@ class SakuraSaplingGenerator : SaplingGenerator() {
         private fun createConfig(leaves: BlockState): TreeFeatureConfig = TreeFeatureConfig.Builder(
             SimpleBlockStateProvider(Blocks.SAKURA_LOG.defaultState),
             SimpleBlockStateProvider(leaves),
+
             LargeOakFoliagePlacer(
                 UniformIntDistribution.of(3, 0),
                 UniformIntDistribution.of(3, 0),
                 4
             ),
+
             LargeOakTrunkPlacer(7, 7, 11),
             ThreeLayersFeatureSize(6, 3, 3, 2, 1, OptionalInt.empty())
         ).build()
