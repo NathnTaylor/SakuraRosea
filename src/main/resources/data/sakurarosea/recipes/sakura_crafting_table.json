@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xx",
+    "xx"
+  ],
+  "key": {
+    "x": {
+      "item": "sakurarosea:sakura_planks"
+    }
+  },
+  "result": {
+    "item": "sakurarosea:sakura_crafting_table",
+    "count": 1
+  }
+}

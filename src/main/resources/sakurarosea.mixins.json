@@ -8,6 +8,7 @@
     "common.BuiltinBiomesAccessor",
     "common.ComposterBlockMixin",
     "common.CraftingScreenHandlerMixin",
+    "common.RecipeManagerMixin",
     "common.SetBaseBiomesLayerMixin",
     "common.SignTypeMixin",
     "common.VanillaLayeredBiomeSourceMixin"
